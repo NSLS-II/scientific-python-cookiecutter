@@ -8,7 +8,7 @@ cache:
 env:
   global:
     # Doctr deploy key for NSLS-II/NSLS-II.github.io
-    - secure: "dipvlKqb4frhL0FJZ8X86kykBe4y7LypIuAt86V8YM+6iFuOZeipjaTtsbULUL6oAXTLDeTM19SGpGXsDVyo2yaTWxwk1/aBC1k5nDxjOqF0L0m0Q2F7XcShvZD7sjI3KNfFiBKINewTD5cGzqM5Okl8EdC9Y/Igdul9DxEEIZWQLPplsNyepkLeIEZMSRKkaBKJOssrrGVOgJE4N0BuB6Axm8Uf75XMiQunHB7y7jJ+JTlYHpdqpewVyvNbQvoHf6chcX+rADoRqwNoCMA1QTo8cCVl9gjlPRWeQb2iNVgxwndSIJhgM80H39DyikTNV90JzJUSVF7PPX6qZU+Y+r6eI4Bo73Ev3sxkDDBMMmKfGOtZ+XWQFamWu/MuM4VMdCLUwK4c9CpgAkFe1UQ6xUqFJgww079YdLLyrW+I0kZnYyjSrNXds+vH2gP+jvXYU8Pej5XMm5vqcmF71FTWZdySFlB1YPSGhiSBl8Z17y3nshhq/u5buJbEtS5UZIq6oZ/waV6NuLbx6goii9a9BgG8pZN220BgF2RymVvsN7ETGLyQsL5WmvcyiIuUG1jg+mEOTTzpSB4yTjC1EgOVpRiHMunk26HtmkycZbf/EmyZK8XuCrpQP5peCequXa2TXoIJqGWB0RS93kyARQa8mHZA1cylez12qR3C8gwxjkY="
+    - secure: "evmeG5/HUR9o9XizCvjl9hnX78eCQTMDpZuZw4i/9BOXz3abYXYX5Hf+E9Zm22HWBe0L+TP7C9+LpjIxhUJt9GNX4Z517W0d+ny1zNqepjFE4zTIfurkKdlDrE3Xp68Bt+5NMY0gSOxiIevXgXbNvQDqFPeejekTnygBoMO7tv7+WW2X1G6UWYs45uY7q2f8tuQUJW1e+eZ3v2s+/8JOifFYQg1Em+xqkBF21OGdoEBgnTMKXYFeAfpXFPjVUnoJ70OJSex4CzEm9oVEF2SR8r9oOlRnBAgH2TPE+e+lLWijeH8FZ0rvGyFTjjfHVv01iiDosFGIXXX6cLPeDuMiyRRgy/9pYCI8naKAbGPQKpNRR5WDNVnRWJNkngD3nmj7IFyISQyl+0naWDM60JkvHG60zwCov4bmE9Sk5npyH5oDgOa17yILSuHkVzg9NKqLuN+h+fYUmlmWm18rifxICkbqI/p9LZIkXmW3DyLNhuoEsGnIRdgCyXamC/5s9diJOuuTAPUhn838HPkxx1pT6pgtOz6hL+N8b0J70B9qzwzzOHfMWU3gGIojNSWR8nCwloczEKwPg5+sRI5w7qkoN90T+o7BuI15GSTn7MLD6+8C9AvqaVTkp11lulOU2NFAz7NOIHcGZuAOyPoKCp/TcFhHBli8a88t83xImzELc4o="
 
 install:
   - pip install -r requirements.txt
@@ -17,4 +17,4 @@ script:
   - set -e
   - make -C docs html
   - pip install doctr
-  - doctr deploy --built-docs docs/build/html/ --deploy-repo NSLS-II/NSLS-II.github.io packaging-sicentific-python
+  - doctr deploy --key-path github_deploy_key_nsls_ii_nsls_ii_github_io.enc --built-docs docs/build/html/ --deploy-repo NSLS-II/NSLS-II.github.io packaging-sicentific-python
