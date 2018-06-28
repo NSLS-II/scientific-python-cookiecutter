@@ -1,0 +1,13 @@
+language: python
+python:
+  - 3.7
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.ccache  # https://github.com/travis-ci/travis-ci/issues/5853
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - echo "PLACEHOLDER"
