@@ -2,6 +2,12 @@
 Publishing Releases
 ===================
 
+At the end of this section you will have:
+
+* Tagged a release of your software
+* Uploaded it to `PyPI <https://pypi.org/>` (Python Package Index) so that
+  users can download and install it using pip.
+
 1. Choose a version number. The convention following by most scientific Python
    packages is ``vMAJOR.MINOR.MICRO``, as in ``v1.3.0``. A good number to start
    with is ``v0.1.0``.
@@ -74,15 +80,22 @@ Publishing Releases
 
         Check your remotes using ``git remote -v``. If your respoitory is
         stored in an organization account, you may need to push to ``upstream``
-        as well as ``origin``
+        as well as ``origin``.
 
-6. Publish a release on PyPI.
+6. `Register for a PyPI account <https://pypi.org/account/register/>`_.
+
+7. Install twine, a tool for uploading packages to PyPI.
+
+   .. code-block:: bash
+
+      python3 -m pip install --user --upgrade twine
+
+8. Publish a release on PyPI.
 
    .. code-block:: bash
 
        python setup.py sdist
        python setup.py bdist_wheel
-       pip install twine
        twine upload dist/*
 
 The package is now installable with pip. It may take a couple minutes to become
