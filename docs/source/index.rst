@@ -31,5 +31,9 @@ Starting from a working, full-featured template, you will:
    :maxdepth: 2
 
    preliminaries
-   notes-for-experts
+   the-code-itself
    including-data-files
+   writing-docs
+   testing
+   publishing-releases
+   notes-for-experts

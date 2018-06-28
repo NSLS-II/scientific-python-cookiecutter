@@ -5,7 +5,7 @@ Notes for Experts
 This is an opinionated tutorial, aiming to streamline the process at the
 expense of some flexibility.
 
-Notable "Opinions":
+Assumptions:
 
 * We assume the project will be support that last two minor releases of Python.
   (As of this writing, that's Python 3.6 and Python 3.7.) Python 2 is near its
