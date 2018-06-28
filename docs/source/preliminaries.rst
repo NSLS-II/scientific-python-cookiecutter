@@ -102,6 +102,16 @@ template.
     .. code-block:: bash
 
        $ git push -u origin master
+       Counting objects: 42, done.
+       Delta compression using up to 4 threads.
+       Compressing objects: 100% (40/40), done.
+       Writing objects: 100% (42/42), 29.63 KiB | 0 bytes/s, done.
+       Total 42 (delta 4), reused 0 (delta 0)
+       remote: Resolving deltas: 100% (4/4), done.
+       To github.com:YOUR_GITHUB_USER_NAME/YOUR_REPO_NAME.git
+        * [new branch]      master -> master
+          Branch master set up to track remote branch master from origin.
+
 
     .. note::
 
@@ -114,6 +124,15 @@ template.
 
            $ git add remote upstream https://github.com/ORGANIZATION_NAME/YOUR_REPOSITORY_NAME.
            $ git push -u upstream master
+           Counting objects: 42, done.
+           Delta compression using up to 4 threads.
+           Compressing objects: 100% (40/40), done.
+           Writing objects: 100% (42/42), 29.63 KiB | 0 bytes/s, done.
+           Total 42 (delta 4), reused 0 (delta 0)
+           remote: Resolving deltas: 100% (4/4), done.
+           To github.com:ORGANIZATION_NAME/YOUR_REPO_NAME.git
+            * [new branch]      master -> master
+              Branch master set up to track remote branch master from upstream.
 
        and, separately, add your personal fork as ``origin``.
 
