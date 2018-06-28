@@ -32,3 +32,4 @@ Starting from a working, full-featured template, you will:
 
    preliminaries
    notes-for-experts
+   including-data-files
