@@ -9,7 +9,8 @@ import versioneer
 # and/or pip.
 if sys.version_info < (3, 6):
     error = """
-{{ cookiecutter.package_dist_name }} does not support Python 2.x, 3.0, 3.1, 3.2, 3.3, 3.4, or 3.5.
+{{ cookiecutter.package_dist_name }} does not support
+Python 2.x, 3.0, 3.1, 3.2, 3.3, 3.4, or 3.5.
 Python 3.6 and above is required. Check your Python version like so:
 
 python --version

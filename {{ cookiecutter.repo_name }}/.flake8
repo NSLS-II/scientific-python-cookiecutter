@@ -1,2 +1,2 @@
 [flake8]
-exclude = .git,__pycache__,build,dist,versioneer.py,suitcase/{{ cookiecutter.package_dir_name }}/_version.py
+exclude = .git,__pycache__,build,dist,versioneer.py,{{ cookiecutter.package_dir_name }}/_version.py,docs/source/conf.py
