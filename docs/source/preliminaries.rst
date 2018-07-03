@@ -2,12 +2,12 @@
 Getting Started
 ===============
 
-At the end of this section you will have:
+In this section you will:
 
-* Signed up for Github
-* Generated a scaffold for your new Python project
-* Uploaded it to GitHub
-* Installed your new Python project for development
+* Sign up for Github.
+* Generate a scaffold for your new Python project.
+* Upload it to GitHub.
+* Install your new Python project for development.
 
 Then, in the next section, we will begin to move your scientific code into that
 template.

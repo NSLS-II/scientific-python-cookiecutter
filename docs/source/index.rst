@@ -32,8 +32,8 @@ Starting from a working, full-featured template, you will:
 
    preliminaries
    the-code-itself
-   including-data-files
    writing-docs
    testing
+   including-data-files
    publishing-releases
    notes-for-experts

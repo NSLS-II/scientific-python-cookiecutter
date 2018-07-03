@@ -2,6 +2,12 @@
 Including Data Files
 ====================
 
+In this section you will:
+
+* Understand the importance of keeping large files out of your package.
+* Learn some alternative approaches.
+* Learn how to include small data files in your package.
+
 Consider Alternatives
 ---------------------
 
@@ -52,6 +58,7 @@ Let's put them in a new directory named ``peak_spacings/``.
 .. code-block:: text
 
     # peak_spacings/LaB6.txt
+
     4.15772
     2.94676
     2.40116
@@ -59,6 +66,7 @@ Let's put them in a new directory named ``peak_spacings/``.
 .. code-block:: text
 
     # peak_spacings/Si.txt
+
     3.13556044
     1.92013079
     1.63749304
@@ -73,6 +81,7 @@ three places:
    .. code-block:: python
 
       # setup.py (excerpt)
+
       package_data={
           'YOUR_PACKAGE_NAME': [
               # When adding files here, remember to update MANIFEST.in as well,
@@ -91,6 +100,7 @@ three places:
    .. code-block:: text
 
       # MANIFEST.in (excerpt)
+
       include peak_spacings/*.txt
 
 #. Finally, wherever we actually use the files in our scientific code, we can
