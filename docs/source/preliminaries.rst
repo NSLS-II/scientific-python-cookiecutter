@@ -63,16 +63,28 @@ template.
       project_short_description [Python package for doing science.]: Example package for docs.
       year [2018]:
 
-   Notice that we use the same name (``example``) in a couple places.
-   If are you wondering what differentiates all these names, here's a primer:
+   This generates a new directory, ``example`` in this case, with all the
+   "scaffolding" of a working Python project.
 
-   * ``project_name`` -- Human-friendly title. Case sensitive. Spaces allowed.
-   * ``package_dist_name`` -- The name to use when you ``pip install ___``.
-     Dashes and underscores are allowed. Dashes are conventional. Case
-     insensitive.
-   * ``package_dir_name`` --- The name to use when you ``import ___`` in Python.
-     Underscores are the only punctuation allowed. Conventionally lowercase.
-   * ``repo_name`` --- The name of the GitHub repository.
+   .. code-block:: bash
+
+      $ ls example/
+      AUTHORS.rst        MANIFEST.in     example                 setup.cfg
+      CONTRIBUTING.rst   README.rst      requirements-dev.txt    setup.py
+      LICENSE            docs            requirements.txt        versioneer.py
+
+   .. note::
+
+      Cookiecutter prompted us for several variations of *name*.
+      If are you wondering what differentiates all these names, here's a primer:
+
+      * ``project_name`` -- Human-friendly title. Case sensitive. Spaces allowed.
+      * ``package_dist_name`` -- The name to use when you ``pip install ___``.
+        Dashes and underscores are allowed. Dashes are conventional. Case
+        insensitive.
+      * ``package_dir_name`` --- The name to use when you ``import ___`` in Python.
+        Underscores are the only punctuation allowed. Conventionally lowercase.
+      * ``repo_name`` --- The name of the GitHub repository.
 
 #. Take a moment to see what we have.
 
@@ -121,7 +133,15 @@ template.
    is where we'll put the scientific code. But first, we should version-control
    our project using git.
 
-#. Make your template a git repository.
+#. Change directories into your new project.
+
+   .. code-block:: bash
+
+      cd example
+
+   We are now in the top-level ``example/`` directory---not ``example/example``!
+
+#. Make the directory a git repository.
 
    .. code-block:: bash
 
