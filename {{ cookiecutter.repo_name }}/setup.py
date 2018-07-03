@@ -53,7 +53,7 @@ setup(
         '{{ cookiecutter.package_dir_name }}': [
             # When adding files here, remember to update MANIFEST.in as well,
             # or else they will not be included in the distribution on PyPI!
-            # 'path/to/data_file.txt',
+            # 'path/to/data_file',
             ]
         },
     install_requires=requirements,
