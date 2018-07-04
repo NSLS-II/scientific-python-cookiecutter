@@ -297,3 +297,44 @@ While not all projects strictly enfore PEP8, we generally recommend it.
 
 This will list linting or stylistic errors. If there is no output, all is well.
 See the `flake8 documentation <http://flake8.pycqa.org/en/latest/>`_ for more.
+
+Multiple modules
+----------------
+
+We created just one module, ``example.refraction``. We might eventually grow a
+second module --- say, ``example.utils``. Some brief advice:
+
+* When in doubt, resist the temptation to grow deep taxonomies of modules and
+  sub-packages, lest it become difficult for users and collaborators to
+  remember where everything is. The Python built-in libraries are generally
+  flat.
+
+* When making intra-package imports, we recommend relative imports.
+
+  This works:
+
+  .. code-block:: bash
+
+     # examples/refraction.py
+
+     from example import utils
+     from example.utils import some_function
+
+  but this is equivalent, and preferred:
+
+  .. code-block:: bash
+
+     # examples/refraction.py
+
+     from . import utils
+     from .utils import some_function
+
+  For one thing, if you change the name of the package in the future, you won't
+  need to update this file.
+
+* Take care to avoid circular imports, wherein two modules each import the
+  other.
+
+In the next section, we'll use a free Continuous Integration service to run
+pytest and (optionally) flake8 automatically whenever a change is made or
+proposed.
