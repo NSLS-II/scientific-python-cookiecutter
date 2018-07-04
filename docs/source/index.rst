@@ -32,8 +32,9 @@ Starting from a working, full-featured template, you will:
 
    preliminaries
    the-code-itself
+   ci
    writing-docs
-   testing
    including-data-files
    publishing-releases
+   advanced-testing
    notes-for-experts
