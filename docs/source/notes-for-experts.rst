@@ -1,6 +1,6 @@
-==========
-Philosophy
-==========
+===========================
+Philosophy of this Tutorial
+===========================
 
 This is an opinionated tutorial, and it streamlines the setup and
 configuration at the expense of some flexibility.
