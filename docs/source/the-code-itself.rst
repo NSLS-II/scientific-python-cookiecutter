@@ -105,7 +105,7 @@ later. Notable features:
 * There is a succinct, one-line summary of the function's purpose. It must one
   line.
 * (Optional) There is an paragraph elaborating on that summary.
-* There is a section list of parameters with the structure
+* There is a section listing input parameters, with the structure
 
   .. code-block :: none
 
@@ -113,7 +113,7 @@ later. Notable features:
          optional description
 
   Note that space before the ``:``. That is part of the standard.
-* There is a section describing what the function results.
+* There is a section describing what the function returns.
 * (Optional) There is a section of one or more examples, each with a
   prose description followed by code.
 
