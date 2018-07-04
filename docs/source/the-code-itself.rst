@@ -4,9 +4,10 @@ The Code Itself
 
 In this section you will:
 
-* Put some scientific code to your Python package.
-* Update our package's list of dependencies in ``requirements.txt``.
-* Write a test.
+* Put some scientific code in your new Python package.
+* Update your package's list of dependencies in ``requirements.txt``.
+* Write a test and run the test suite.
+* Use a "linter" and style-checker.
 
 A simple function with inline documentation
 -------------------------------------------
@@ -54,7 +55,8 @@ Look again at the directory structure.
    └── versioneer.py
 
 Our scientific code should go in the ``example/`` subdirectory, next to
-``__init__.py``. Let's make a file named ``refraction.py``.
+``__init__.py``. Let's make a new file in that directory named
+``refraction.py``.
 
 .. code-block:: python
 
@@ -100,9 +102,10 @@ Further, by following the
 we will be able to automatically generate nice-looking HTML documentation
 later. Notable features:
 
-* There is a succinct, one-line summary of the functions use. It must one line.
-* There is an optional paragraph elaborating on that summary.
-* There is a list of parameters with the structure
+* There is a succinct, one-line summary of the function's purpose. It must one
+  line.
+* (Optional) There is an paragraph elaborating on that summary.
+* There is a section list of parameters with the structure
 
   .. code-block :: none
 
@@ -110,7 +113,9 @@ later. Notable features:
          optional description
 
   Note that space before the ``:``. That is part of the standard.
-* Finally, there is an optional block of examples.
+* There is a section describing what the function results.
+* (Optional) There is a section of one or more examples, each with a
+  prose description followed by code.
 
 Update Requirements
 -------------------
@@ -271,8 +276,10 @@ Things to notice:
 * Remember that the names of all test modules and functions must begin with
   ``test`` or they will not be picked up by pytest!
 
-Lint: Check for suspicious-looking code
----------------------------------------
+See :doc:`advanced-testing` for more.
+
+"Lint": Check for suspicious-looking code
+-----------------------------------------
 
 A `linter <https://en.wikipedia.org/wiki/Lint_(software)>`_ is a tool that
 analyzes code to flag potential errors. For example, it can catch variables you
@@ -282,6 +289,7 @@ The cookiecutter configured ``flake8`` for this purpose. Flake8 checks for
 "lint" and also enforces the standard Python coding style,
 `PEP8 <https://www.python.org/dev/peps/pep-0008/?#introduction>`_. Enforcing
 consistent style helps projects stay easy to read and maintain as they grow.
+While not all projects strictly enfore PEP8, we generally recommend it.
 
 .. code-block:: bash
 

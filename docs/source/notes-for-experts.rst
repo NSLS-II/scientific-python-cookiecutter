@@ -14,7 +14,7 @@ encountered the need for it.
 
 Assumptions:
 
-* We assume the project will be support that last two minor releases of Python.
+* We assume the project will support the last two minor releases of Python.
   (As of this writing, that's Python 3.6 and Python 3.7.) Python 2 is near its
   scheduled end of life, and Python 3 has
   `many well-documented benefits <https://python-3-for-scientists.readthedocs.io/en/latest/>`_
