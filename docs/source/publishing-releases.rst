@@ -5,7 +5,7 @@ Publishing Releases
 At the end of this section you will have:
 
 * Tagged a release of your software
-* Uploaded it to `PyPI <https://pypi.org/>` (Python Package Index) so that
+* Uploaded it to `PyPI <https://pypi.org/>`_ (Python Package Index) so that
   users can download and install it using pip.
 
 1. Choose a version number. The convention following by most scientific Python
