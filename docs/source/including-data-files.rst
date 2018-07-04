@@ -17,7 +17,8 @@ sluggish, because it is not designed to operate on large binary files, and your
 package will become an annoyingly large download.
 
 Removing accidentally-committed files after the fact is *possible* but
-destructive, so it's important to avoid committing large files.
+destructive, so it's important to avoid committing large files in the first
+place.
 
 Alternatives:
 
