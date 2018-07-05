@@ -35,6 +35,7 @@ Starting from a working, full-featured template, you will:
    ci
    writing-docs
    including-data-files
+   publishing-docs
    publishing-releases
    advanced-testing
    further-reading
