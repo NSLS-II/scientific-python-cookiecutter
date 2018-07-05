@@ -1,7 +1,10 @@
 # These are the requirements for building the tutorial documentation.
 # See a separate requirements.txt file inside the cookiecutter.
+cookiecutter
 ipython
 matplotlib
+numpy
 numpydoc
+pexpect
 sphinx
 sphinx_rtd_theme
