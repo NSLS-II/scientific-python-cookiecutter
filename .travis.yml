@@ -15,6 +15,10 @@ install:
 
 script:
   - set -e
+  - ./run_cookiecutter_example.py
+  - pip install -e example/
+  - ./copy_user_content.sh
+  - pytest example/
   - make -C docs html
   - pip install doctr
   - doctr deploy --key-path github_deploy_key_nsls_ii_nsls_ii_github_io.enc --built-docs docs/build/html/ --deploy-repo NSLS-II/NSLS-II.github.io packaging-scientific-python

@@ -68,38 +68,10 @@ Our scientific code should go in the ``example/`` subdirectory, next to
    │   └── tests
    │       └── test_examples.py
 
-.. code-block:: python
+This is our new file. You may follow along exactly or, instead, make a file
+with a different name and your own scientific function.
 
-    # example/refraction.py
-
-    import numpy as np
-
-
-    def snell(theta_inc, n1, n2):
-        """
-        Compute the refraction angle using Snell's Law.
-
-        See https://en.wikipedia.org/wiki/Snell%27s_law
-
-        Parameters
-        ----------
-        theta_inc : float
-            Incident angle in radians.
-        n1, n2 : float
-            The refractive index of medium of origin and destination medium.
-
-        Returns
-        -------
-        theta : float
-            refraction angle
-
-        Examples
-        --------
-        A ray enters an air--water boundary at 45 degrees. Compute exit angle.
-        >>> snell(np.deg2rad(45), 1.00, 1.33)
-        0.5605584137424605
-        """
-        return np.arcsin(n1 / n2 * np.sin(theta_inc))
+.. literalinclude:: refraction.py
 
 Notice that this example includes inline documentation --- a "docstring". This
 is extremely useful for collaborators, and the most common collaborator is
@@ -124,8 +96,9 @@ later. Notable features:
 * Similar parameters may be combined into one entry for brevity's sake, as we
   have done for ``n1, n2`` here.
 * There is a section describing what the function returns.
-* (Optional) There is a section of one or more examples, each with a
-  prose description followed by code.
+* (Optional) There is a section of one or more examples.
+
+We will revisit docstrings in the section on :doc:`writing-docs`.
 
 Update Requirements
 -------------------
@@ -247,34 +220,7 @@ Write a Test
 Let's add a test to ``test_examples.py`` that exercises our ``snell`` function.
 We can delete ``test_one_plus_one_is_two`` now.
 
-.. code-block:: python
-
-   # example/tests/test_examples.py
-
-   import numpy as np
-   from ..refraction import snell
-   # (The above is equivalent to `from example.refraction import snell`.
-   # Read on for why.)
-
-
-   def test_perpendicular():
-       # For any indexes, a ray normal to the surface should not bend.
-       # We'll try a couple different combinations of indexes....
-
-       actual = snell(0, 2.00, 3.00)
-       expected = 0
-       assert actual == expected
-
-       actual = snell(0, 3.00, 2.00)
-       expected = 0
-       assert actual == expected
-
-
-   def test_air_water():
-       n_air, n_water = 1.00, 1.33
-       actual = snell(np.deg2rad(45), n_air, n_water)
-       expected = 0.5605584137424605
-       assert np.allclose(actual, expected)
+.. literalinclude:: test_examples.py
 
 Things to notice:
 
