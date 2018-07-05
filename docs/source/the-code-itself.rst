@@ -378,7 +378,7 @@ second module --- say, ``example.utils``. Some brief advice:
 
   .. code-block:: bash
 
-     # examples/refraction.py
+     # example/refraction.py
 
      from example import utils
      from example.utils import some_function
@@ -387,7 +387,7 @@ second module --- say, ``example.utils``. Some brief advice:
 
   .. code-block:: bash
 
-     # examples/refraction.py
+     # example/refraction.py
 
      from . import utils
      from .utils import some_function
