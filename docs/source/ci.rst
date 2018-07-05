@@ -37,6 +37,11 @@ remove the line that does ``flake8`` style-checking.
 Activate Travis-CI for Your GitHub Repository
 ---------------------------------------------
 
+.. warning::
+
+   The following instructions are not yet well tested.
+   `Feedback is welcome!  <https://github.com/NSLS-II/packaging-scientific-python/issues/new>`_
+
 1. Go to https://travis-ci.org and sign in with your GitHub account.
 2. Go to https://travis-ci.org/profile, which shows a list of your GitHub
    repositories. Click the "Sync Account" button to refresh that list.

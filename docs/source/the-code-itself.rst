@@ -57,7 +57,16 @@ Look again at the directory structure.
 
 Our scientific code should go in the ``example/`` subdirectory, next to
 ``__init__.py``. Let's make a new file in that directory named
-``refraction.py``.
+``refraction.py``, meaning our new layout will be:
+
+.. code-block:: none
+
+   ├── example
+   │   ├── __init__.py
+   │   ├── _version.py
+   │   ├── refraction.py
+   │   └── tests
+   │       └── test_examples.py
 
 .. code-block:: python
 
