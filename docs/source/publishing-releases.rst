@@ -93,7 +93,7 @@ any breaking changes. All users are encouraged to upgrade."
 
    .. code-block:: bash
 
-      python3 -m pip install --user --upgrade twine
+      python3 -m pip install --upgrade twine
 
 8. Publish a release on PyPI.
 

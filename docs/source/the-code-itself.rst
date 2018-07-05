@@ -74,11 +74,9 @@ Our scientific code should go in the ``example/`` subdirectory, next to
         Parameters
         ----------
         theta_inc : float
-            Incident angle
-        n1 : float
-            Refractive index of medium of origin
-        n2: : float
-            Refractive index of destination medium
+            Incident angle in radians.
+        n1, n2 : float
+            The refractive index of medium of origin and destination medium.
 
         Returns
         -------
@@ -113,6 +111,8 @@ later. Notable features:
          optional description
 
   Note that space before the ``:``. That is part of the standard.
+* Similar parameters may be combined into one entry for brevity's sake, as we
+  have done for ``n1, n2`` here.
 * There is a section describing what the function returns.
 * (Optional) There is a section of one or more examples, each with a
   prose description followed by code.
@@ -137,7 +137,7 @@ We can test it by reinstalling the package.
 
 .. code-block:: bash
 
-   python3 -m pip install --user -e .
+   python3 -m pip install -e .
 
 Try it
 ------
@@ -191,13 +191,13 @@ template has listed some defaults in ``requirements-dev.txt``.
 
 .. code-block:: bash
 
-   python3 -m pip install --upgrade --user -r requirements-dev.txt
+   python3 -m pip install --upgrade -r requirements-dev.txt
 
 Now run the tests like so.
 
 .. code-block:: bash
 
-   pytest
+   python3 -m pytest
 
 This walks through all the directories and files in our package that start with
 the word 'test' and collects all the functions whose name also starts with
@@ -293,7 +293,7 @@ While not all projects strictly enfore PEP8, we generally recommend it.
 
 .. code-block:: bash
 
-    flake8
+    python3 -m flake8
 
 This will list linting or stylistic errors. If there is no output, all is well.
 See the `flake8 documentation <http://flake8.pycqa.org/en/latest/>`_ for more.

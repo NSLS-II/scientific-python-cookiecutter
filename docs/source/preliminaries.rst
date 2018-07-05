@@ -45,7 +45,7 @@ template.
 
    .. code-block:: bash
 
-      python3 -m pip install --user --upgrade cookiecutter
+      python3 -m pip install --upgrade cookiecutter
 
 #. Generate a new Python project using our cookiecutter template. Just
    following the prompts. The default suggestion is given in square brackets.
@@ -217,7 +217,7 @@ template.
 
    .. code-block:: python
 
-      python3 -m pip install --user -e .
+      python3 -m pip install -e .
 
    .. note::
 
