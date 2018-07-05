@@ -97,7 +97,7 @@ can be written as:
 
 
    @pytest.fixture
-   def peak(request):
+   def peak():
        # Construct a 1-dimensional Gaussian peak.
        x = np.linspace(-10, 10, num=21)
        sigma = 3.0
