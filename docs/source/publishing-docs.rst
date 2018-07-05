@@ -2,7 +2,8 @@
 Publishing the Documentation
 ============================
 
-In this section you will pushing your documentation on a public website.
+In this section you will publish your documentation on a public website hosted
+by GitHub Pages.
 
 This section assume you have already set up Travis-CI, as we covered in a
 previous section, :doc:`ci`.
