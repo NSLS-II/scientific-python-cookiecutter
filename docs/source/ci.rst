@@ -45,4 +45,4 @@ Activate Travis-CI for Your GitHub Repository
 
 The next time you open a pull request or push a new commit to the master
 branch, Travis-CI will kick off a *build*, which you can see at
-https://travis-ci.org/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/builds.
+``https://travis-ci.org/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/builds``.
