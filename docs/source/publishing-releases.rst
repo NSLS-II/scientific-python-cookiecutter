@@ -8,7 +8,7 @@ In this section you will:
 * Upload it to `PyPI <https://pypi.org/>`_ (Python Package Index) so that
   users can download and install it using pip.
 
-1. Choose a version number. The convention following by most scientific Python
+#. Choose a version number. The convention following by most scientific Python
    packages is ``vMAJOR.MINOR.MICRO``, as in ``v1.3.0``. A good number to start
    with is ``v0.1.0``.
 
@@ -33,10 +33,15 @@ In this section you will:
    Obviously this is an imprecise system. Think of it a highly-compressed,
    lossy representation of how painful it will be for the user to upgrade.
 
-2. Type ``git status`` and check that you are on the ``master`` branch with no
+#. Update ``release-history.rst`` in the documentation if you have not done so
+   already. (See :doc:`writing-docs`.) It must address any breaking changes
+   that could require users of your Python package to change their code. It may
+   also highlight any additions, improvements, and bug fixes.
+
+#. Type ``git status`` and check that you are on the ``master`` branch with no
    uncommitted code.
 
-3. Mark the release with an empty commit, just to leave a marker. This is
+#. Mark the release with an empty commit, just to leave a marker. This is
    optional, but it makes it easier to find the release when skimming through
    the git history.
 
@@ -44,18 +49,18 @@ In this section you will:
 
       git commit --allow-empty -m "REL: vX.Y.Z"
 
-4. Tag the commit.
+#. Tag the commit.
 
    .. code-block:: bash
 
       git tag -a vX.Y.Z  # Don't forget the leading v
 
-This will create a tag named ``vX.Y.Z``. The ``-a`` flag (optional but
-recommended) opens up a text editor where you should enter a brief description
-of the release, such as "This releases fixes some bugs but does not introduce
-any breaking changes. All users are encouraged to upgrade."
+   This will create a tag named ``vX.Y.Z``. The ``-a`` flag (optional but
+   recommended) opens up a text editor where you should enter a brief
+   description of the release, such as "This releases fixes some bugs but does
+   not introduce any breaking changes. All users are encouraged to upgrade."
 
-5. Verify that the ``__version__`` attribute is correctly updated.
+#. Verify that the ``__version__`` attribute is correctly updated.
 
    The version is reported in three places:
 
@@ -74,7 +79,7 @@ any breaking changes. All users are encouraged to upgrade."
       import your_package
       your_package.__version__  # should be 'X.Y.Z'
 
-5. Push the new commit and the tag to ``master``.
+#. Push the new commit and the tag to ``master``.
 
    .. code-block:: bash
 
@@ -87,15 +92,15 @@ any breaking changes. All users are encouraged to upgrade."
         stored in an organization account, you may need to push to ``upstream``
         as well as ``origin``.
 
-6. `Register for a PyPI account <https://pypi.org/account/register/>`_.
+#. `Register for a PyPI account <https://pypi.org/account/register/>`_.
 
-7. Install twine, a tool for uploading packages to PyPI.
+#. Install twine, a tool for uploading packages to PyPI.
 
    .. code-block:: bash
 
       python3 -m pip install --upgrade twine
 
-8. Publish a release on PyPI.
+#. Publish a release on PyPI.
 
    .. code-block:: bash
 
