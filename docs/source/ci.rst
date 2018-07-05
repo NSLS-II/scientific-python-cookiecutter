@@ -22,3 +22,7 @@ The cookiecutter template has already generated a configuration file for
 Travis-CI.
 
 .. literalinclude:: ../../{{ cookiecutter.repo_name }}/.travis.yml
+
+You can customize this to your liking. For example, if you are migrating a
+large amount of existing code that is not compliant with PEP8, you may want to
+remove the line that does ``flake8`` style-checking.

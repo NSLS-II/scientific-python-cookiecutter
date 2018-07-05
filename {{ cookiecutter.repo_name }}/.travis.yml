@@ -7,7 +7,9 @@ cache:
     - $HOME/.ccache  # https://github.com/travis-ci/travis-ci/issues/5853
 
 install:
+  # Install this package and the packages listed in requirements.txt.
   - pip install .
+  # Install extra requirements for running tests and building docs.
   - pip install -r requirements-dev.txt
 
 script:
