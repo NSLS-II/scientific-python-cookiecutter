@@ -8,6 +8,7 @@ In this section you will:
 * Update your package's list of dependencies in ``requirements.txt``.
 * Write a test and run the test suite.
 * Use a "linter" and style-checker.
+* Commit your changes to git and sync your changes with GitHub.
 
 A simple function with inline documentation
 -------------------------------------------
@@ -307,6 +308,10 @@ Remember to commit your changes to version control and push them up to GitHub.
 
    This usage is part of a workflow named *GitHub flow*. See
    `this guide <https://guides.github.com/introduction/flow/>`_ for more.
+
+Remember that at any time you may use ``git status`` to check which branch
+you are currently on and which files have uncommitted changes. Use ``git diff``
+to review the content of those changes.
 
 1. If you have not already done so, create a new "feature branch" for this work
    with some descriptive name.
