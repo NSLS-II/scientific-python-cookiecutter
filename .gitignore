@@ -1,2 +1,4 @@
-docs/build/*
+docs/build/
+docs/source/generated/
 *.swp
+example/
