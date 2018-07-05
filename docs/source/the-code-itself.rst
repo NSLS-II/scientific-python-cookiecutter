@@ -298,6 +298,69 @@ While not all projects strictly enfore PEP8, we generally recommend it.
 This will list linting or stylistic errors. If there is no output, all is well.
 See the `flake8 documentation <http://flake8.pycqa.org/en/latest/>`_ for more.
 
+Commit and Push Changes
+-----------------------
+
+Remember to commit your changes to version control and push them up to GitHub.
+
+.. note::
+
+   This usage is part of a workflow named *GitHub flow*. See
+   `this guide <https://guides.github.com/introduction/flow/>`_ for more.
+
+1. If you have not already done so, create a new "feature branch" for this work
+   with some descriptive name.
+
+   .. code-block:: bash
+
+      git checkout master  # Starting from the master branch...
+      git checkout -b add-snell-function  # ...make a new branch.
+
+2. Stage changes to be committed. In our example, we have created one new file
+   and changed an existing one. We ``git add`` both.
+
+   .. code-block:: bash
+
+      git add example/refraction.py
+      git add example/tests/test_examples.py
+
+3. Commit changes.
+
+   .. code-block:: bash
+
+      git commit -m "Add snell function and tests."
+
+4. Push changes to remote repository on GitHub.
+
+   .. code-block:: bash
+
+      git push origin add-snell-function
+
+5. Repeat steps 2-4 until you are happy with this feature.
+
+6. Create a Pull Request --- or merge to master.
+
+   When you are ready for collaborators to review your work and consider merging
+   the ``add-snell-function`` branch into the ``master`` branch,
+   `create a pull request <https://help.github.com/articles/creating-a-pull-request>`_.
+   Even if you presently have no collaborators, going through this process is a
+   useful way to document the history of changes to the project for any *future*
+   collaborators (and Future You).
+
+   However, if you are in the early stages of just getting a project up and you
+   are the only developer, you might skip the pull request step and merge the
+   changes yourself.
+
+   .. code-block:: bash
+
+      git checkout master
+      # Ensure local master branch is up to date with remote master branch.
+      git pull --ff-only origin master
+      # Merge the commits from add-snell-function into master.
+      git merge add-snell-function
+      # Update the remote master branch.
+      git push origin master
+
 Multiple modules
 ----------------
 
