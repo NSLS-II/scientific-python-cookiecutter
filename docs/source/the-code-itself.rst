@@ -304,7 +304,10 @@ Commit and Push Changes
 
 Remember to commit your changes to version control and push them up to GitHub.
 
-.. note::
+.. important::
+
+   The following is a quick reference that makes some assumptions about your
+   local configuration and workflow.
 
    This usage is part of a workflow named *GitHub flow*. See
    `this guide <https://guides.github.com/introduction/flow/>`_ for more.
