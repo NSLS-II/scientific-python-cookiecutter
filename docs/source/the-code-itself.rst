@@ -243,6 +243,9 @@ We can delete ``test_one_plus_one_is_two`` now.
    # example/tests/test_examples.py
 
    import numpy as np
+   from ..refraction import snell
+   # (The above is equivalent to `from example.refraction import snell`.
+   # Read on for why.)
 
 
    def test_perpendicular():

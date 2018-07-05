@@ -16,7 +16,7 @@ If "Continuous Integration" (CI) is new to you, we refer you to
 on the subject. To summarize, CI speeds development by checking out your code on
 a fresh, clean server, installing your software, running the tests, and
 reporting the results. This helps you ensure that your code will work on your
-colleague's computer---that is doesn't accidentally depend on some local detail
+colleague's computer---that it doesn't accidentally depend on some local detail
 of your machine. It also creates a clear, public record of whether the tests
 passed or failed, so if things are accidentally broken (say, while you are on
 vacation) you can trace when the breaking change occurred.
