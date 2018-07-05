@@ -55,7 +55,7 @@ list ``[(2.00, 3.00), (3.00, 2.00)]``, passing in the respective values ``n1``
 and ``n2`` as arguments.
 
 From here we refer you to the
-`pytest parametrize documentation <https://docs.pytest.org/en/latest/parametrize.html>`.
+`pytest parametrize documentation <https://docs.pytest.org/en/latest/parametrize.html>`_.
 
 Fixtures
 --------
