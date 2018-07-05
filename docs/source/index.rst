@@ -22,8 +22,8 @@ Starting from a working, full-featured template, you will:
 * Add automated tests to help ensure that new changes don't break existing
   functionality.
 * Use a free CI (continuous integration) service to automatically run your
-  tests against any proposed changes, and automatically publish your
-  documentation a change is made.
+  tests against any proposed changes and automatically publish the latest
+  documentation when a change is made.
 * Publish a release on PyPI so that users and collaborators can install your
   code with pip.
 
