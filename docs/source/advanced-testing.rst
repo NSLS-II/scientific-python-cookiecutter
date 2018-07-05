@@ -2,13 +2,14 @@
 Common Patterns for Tests
 =========================
 
-Some quick examples of useful patterns using pytest:
+In this section you will learn some useful features of pytest that can make
+your tests succinct and easy to maintain.
 
 Parametrized Tests
 ------------------
 
 Tests that apply the same general test logic to a collection of different
-parameters can use parameterized tests. For example, this:
+parameters can use parametrized tests. For example, this:
 
 .. code-block:: python
 
@@ -91,6 +92,7 @@ can be written as:
 
 .. code-block:: python
 
+   import pytest
    import numpy as np
 
 
@@ -129,7 +131,7 @@ Examples:
 
 .. code-block:: python
 
-   imoprt pytest
+   import pytest
    import sys
 
 
