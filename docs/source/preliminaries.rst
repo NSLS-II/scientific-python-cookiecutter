@@ -154,7 +154,7 @@ template.
    .. code-block:: bash
 
       $ git add .
-      $ git commit -am "Initial commit."
+      $ git commit -m "Initial commit."
 
 #. `Create a new repository on GitHub <https://github.com/new>`_,
    naming it with the ``repo_name`` from your cookiecutter input above.
