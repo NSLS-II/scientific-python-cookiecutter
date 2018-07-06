@@ -43,7 +43,7 @@ the original author. That is, branching out from the initial use case should
 enable unplanned functionality without a massive increase in complexity.
 
 When building new things, work your way down to the lowest level, understand
-than level and then build back up. Try to imagine what else you would want to
+that level, and then build back up. Try to imagine what else you would want to
 do with the capability you are implementing for other research groups, for
 related scientific applications, and next year.
 
