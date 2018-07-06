@@ -60,9 +60,9 @@ with scientific logic.
 
 I/O-related functions should *only* perform I/O. For example, they should take
 in a filepath and return a numpy array, or a dictionary of arrays and metadata.
-The valuable scientific logic should be encoded in function that take in
-standard data types and return standard data types. This maximizes their
-potential for reuse by other applications.
+The valuable scientific logic should be encoded in functions that take in
+standard data types and return standard data types. This makes them easier to
+test, maintain when data formats change, or reuse for unforeseen applications.
 
 Duck Typing is a Good Idea
 --------------------------
