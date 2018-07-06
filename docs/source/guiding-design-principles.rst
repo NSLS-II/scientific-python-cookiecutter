@@ -72,11 +72,12 @@ on what they can *do* based on what type they *are*.
 
 Python in general and scientific Python in particular leverage *interfaces* to
 support reuse. For example, it is possible to pass a pandas DataFrame to the
-:func:`numpy.sum` even though pandas was created long after :func:`numpy.sum`.
-This is because :func:`numpy.sum` avoids assuming it will be passed specific
-data types; it accepts any object that provides the right methods (interfaces).
-Where possible, avoid ``isinstance`` checks in your code, and try to make your
-functions work on the broadest possible range of input types.
+:func:`numpy.sum` function even though pandas was created long after
+:func:`numpy.sum`.  This is because :func:`numpy.sum` avoids assuming it will
+be passed specific data types; it accepts any object that provides the right
+methods (interfaces).  Where possible, avoid ``isinstance`` checks in your
+code, and try to make your functions work on the broadest possible range of
+input types.
 
 "Stop Writing Classes"
 ----------------------
