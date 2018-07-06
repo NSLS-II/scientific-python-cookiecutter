@@ -168,7 +168,7 @@ template.
 
    .. code-block:: bash
 
-      $ git add remote origin https://github.com/YOUR_GITHUB_USER_NAME/YOUR_REPOSITORY_NAME.
+      $ git remote add origin https://github.com/YOUR_GITHUB_USER_NAME/YOUR_REPOSITORY_NAME.
 
    ... and upload the code.
 
@@ -195,7 +195,7 @@ template.
 
       .. code-block:: bash
 
-          $ git add remote upstream https://github.com/ORGANIZATION_NAME/YOUR_REPOSITORY_NAME.
+          $ git remote add upstream https://github.com/ORGANIZATION_NAME/YOUR_REPOSITORY_NAME.
           $ git push -u upstream master
           Counting objects: 42, done.
           Delta compression using up to 4 threads.
@@ -211,7 +211,7 @@ template.
 
       .. code-block:: bash
 
-          $ git add remote origin https://github.com/YOUR_GITHUB_USER_NAME/YOUR_REPOSITORY_NAME.
+          $ git remote add origin https://github.com/YOUR_GITHUB_USER_NAME/YOUR_REPOSITORY_NAME.
 
 #. Now let's install your project for development.
 
