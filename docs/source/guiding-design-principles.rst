@@ -106,7 +106,7 @@ Complexity is Always Conserved
 Attempts to hide complexity from the user frequently backfire.
 
 For example, it is often tempting to hide certain reused keywords in a
-function. For example, it would be tempting to shorten this:
+function. It might be tempting to shorten this:
 
 .. code-block:: python
 
@@ -125,6 +125,6 @@ arguments, it has been slightly complicated through the need to dig through
 more documentation to better understand how to use them.
 
 Because new science occurs when old ideas are reapplied or extended in
-unforeseen ways, scientific code should should not bury its complexity and
-overly optimize for a specific use case. It should expose what complexity there
-is straightforwardly.
+unforeseen ways, scientific code should not bury its complexity or overly
+optimize for a specific use case. It should expose what complexity there is
+straightforwardly.
