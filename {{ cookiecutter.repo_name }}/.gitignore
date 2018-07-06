@@ -61,7 +61,17 @@ docs/source/generated/
 target/
 
 # Editor files
+#mac
+.DS_Store
+*~
+
+#vim
 *.swp
+*.swo
+
+#pycharm
+.idea/*
+
 
 #Ipython Notebook
 .ipynb_checkpoints
