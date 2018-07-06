@@ -1,7 +1,7 @@
 {
     "full_name": "Name or Organization",
     "email": "",
-    "github_username": "",
+    "github_orgname": "",
     "project_name": "Your Project Name",
     "package_dist_name": "{{ cookiecutter.project_name|replace(' ', '-')|lower }}",
     "package_dir_name": "{{ cookiecutter.project_name|replace(' ', '_')|lower }}",
