@@ -99,3 +99,32 @@ plain old numpy arrays. All scientific Python libraries understand numpy
 arrays, but they don't understand custom classes, so it is better to pass
 application-specific metadata *alongside* a standard array than to try to
 encapsulate all of that information in a new, bespoke object.
+
+Complexity is Always Conserved
+------------------------------
+
+Attempts to hide complexity from the user frequently backfire.
+
+For example, it is often tempting to hide certain reused keywords in a
+function. For example, it would be tempting to shorten this:
+
+.. code-block:: python
+
+    get_image(filename, normalize=True, beginning=0, end=None):
+        ...
+
+into this:
+
+.. code-block:: python
+
+    def get_image(filename, options={}):
+        ...
+
+Although the complexity appears to have been reduced through hidden keyword
+arguments, it has been slightly complicated through the need to dig through
+more documentation to better understand how to use them.
+
+Because new science occurs when old ideas are reapplied or extended in
+unforeseen ways, scientific code should should not bury its complexity and
+overly optimize for a specific use case. It should expose what complexity there
+is straightforwardly.
