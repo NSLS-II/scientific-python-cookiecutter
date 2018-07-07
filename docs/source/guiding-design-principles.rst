@@ -71,13 +71,13 @@ Duck Typing is a Good Idea
 on what they can *do*, not based on what type they *are*.
 
 Python in general and scientific Python in particular leverage *interfaces* to
-support reuse. For example, it is possible to pass a pandas DataFrame to the
-:func:`numpy.sum` function even though pandas was created long after
-:func:`numpy.sum`. This is because :func:`numpy.sum` avoids assuming it will
-be passed specific data types; it accepts any object that provides the right
-methods (interfaces). Where possible, avoid ``isinstance`` checks in your
-code, and try to make your functions work on the broadest possible range of
-input types.
+support interoperability and reuse. For example, it is possible to pass a
+pandas DataFrame to the :func:`numpy.sum` function even though pandas was
+created long after :func:`numpy.sum`. This is because :func:`numpy.sum` avoids
+assuming it will be passed specific data types; it accepts any object that
+provides the right methods (interfaces). Where possible, avoid ``isinstance``
+checks in your code, and try to make your functions work on the broadest
+possible range of input types.
 
 "Stop Writing Classes"
 ----------------------
@@ -108,7 +108,7 @@ Complexity is always conserved and is strictly greater than the system the code
 is modeling. Attempts to hide complexity from the user frequently backfire.
 
 For example, it is often tempting to hide certain reused keywords in a
-function. It might be tempting to shorten this:
+function, shortening this:
 
 .. code-block:: python
 
