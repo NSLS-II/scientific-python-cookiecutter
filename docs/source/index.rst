@@ -37,6 +37,7 @@ Starting from a working, full-featured template, you will:
    including-data-files
    publishing-docs
    publishing-releases
+   guiding-design-principles
    advanced-testing
    further-reading
    notes-for-experts
