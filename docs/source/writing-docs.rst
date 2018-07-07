@@ -4,8 +4,8 @@ Writing Documentation
 
 In this section you will:
 
-* Generate HTML documentation from the basic documentation source provided by
-  the cookiecutter template.
+* Generate HTML documentation using Sphinx, starting from a working example
+  provided by the cookiecutter template.
 * Edit ``usage.rst`` to add API documentation and narrative documentation.
 * Learn how to incorporate code examples, IPython examples, and matplotlib
   plots.
@@ -13,7 +13,10 @@ In this section you will:
 Build the docs
 --------------
 
-The cookiecutter template generated some documentation to start from.
+Almost all scientific Python projects use the
+`Sphinx documentation generator <http://www.sphinx-doc.org/>`_.
+The cookiecutter template provided a working example with some popular
+extensions installed and some sample pages.
 
 .. code-block:: none
 
