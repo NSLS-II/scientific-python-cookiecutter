@@ -54,9 +54,9 @@ narrow solution.
 Keep I/O Separate
 -----------------
 
-One of the biggest impediments to reuse of scientific code is when I/O code---
-assuming certain file locations, names, formats, or layouts---is interspersed
-with scientific logic.
+One of the biggest impediments to reuse of scientific code is when I/O
+code---assuming certain file locations, names, formats, or layouts---is
+interspersed with scientific logic.
 
 I/O-related functions should *only* perform I/O. For example, they should take
 in a filepath and return a numpy array, or a dictionary of arrays and metadata.
@@ -68,7 +68,7 @@ Duck Typing is a Good Idea
 --------------------------
 
 `Duck typing <https://en.wikipedia.org/wiki/Duck_typing>`_ treats objects based
-on what they can *do* based on what type they *are*.
+on what they can *do*, not based on what type they *are*.
 
 Python in general and scientific Python in particular leverage *interfaces* to
 support reuse. For example, it is possible to pass a pandas DataFrame to the
