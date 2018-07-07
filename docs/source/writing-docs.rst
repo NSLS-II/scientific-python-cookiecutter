@@ -47,7 +47,7 @@ from this source, run:
 You should see some log message ending in ``build succeeded.``
 
 This output HTML will be located in ``docs/build/html``. In your Internet
-browser, open ``file:///.../docs/build/html/index.html``, where ``...`` is the
+browser, open ``file://.../docs/build/html/index.html``, where ``...`` is the
 path to your project directory. If you aren't sure sure where that is, type
 ``pwd``.
 
