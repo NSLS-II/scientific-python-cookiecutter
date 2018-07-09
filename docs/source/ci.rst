@@ -50,3 +50,14 @@ Activate Travis-CI for Your GitHub Repository
    list will currently be empty. You'll see construction cones.
 #. The next time you open a pull request or push a new commit to the master
    branch, Travis-CI will kick off a new build, and that list will update.
+
+.. note::
+
+    If this repository belongs to a GitHub *organization* (e.g.
+    http://github.com/NSLS-II) as opposed to a personal user account
+    (e.g. http://github.com/danielballan) you should follow Steps 3-5
+    above for the organization's profile at
+    ``https://travis-ci.org/profile/YOUR_GITHUB_ORGANIZATION``. It does no
+    harm to *also* activate Travis-CI for your personal fork at
+    ``https://travis.org/profile``, but it's more important to activate it for
+    the upstream fork associated with the organization.

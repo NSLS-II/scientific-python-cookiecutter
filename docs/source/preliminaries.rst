@@ -188,8 +188,8 @@ template.
 
    .. note::
 
-      If this repository is to belong to a GitHub *organiziation* (e.g.
-      http://github.com/NSLS-II) as opposed to a specific user account
+      If this repository is to belong to a GitHub *organization* (e.g.
+      http://github.com/NSLS-II) as opposed to a personal user account
       (e.g. http://github.com/danielballan) it is conventional to name the
       organization remote ``upstream`` instead of ``origin``.
 
