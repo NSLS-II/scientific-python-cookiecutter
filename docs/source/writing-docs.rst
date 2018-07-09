@@ -4,16 +4,19 @@ Writing Documentation
 
 In this section you will:
 
-* Generate HTML documentation from the basic documentation source provided by
-  the cookiecutter template.
+* Generate HTML documentation using Sphinx, starting from a working example
+  provided by the cookiecutter template.
 * Edit ``usage.rst`` to add API documentation and narrative documentation.
-* Learn how to incorporate code examples, IPython examples, and matplotlib
-  plots.
+* Learn how to incorporate code examples, IPython examples, matplotlib plots,
+  and typeset math.
 
 Build the docs
 --------------
 
-The cookiecutter template generated some documentation to start from.
+Almost all scientific Python projects use the
+`Sphinx documentation generator <http://www.sphinx-doc.org/>`_.
+The cookiecutter template provided a working example with some popular
+extensions installed and some sample pages.
 
 .. code-block:: none
 
@@ -44,7 +47,7 @@ from this source, run:
 You should see some log message ending in ``build succeeded.``
 
 This output HTML will be located in ``docs/build/html``. In your Internet
-browser, open ``file:///.../docs/build/html/index.html``, where ``...`` is the
+browser, open ``file://.../docs/build/html/index.html``, where ``...`` is the
 path to your project directory. If you aren't sure sure where that is, type
 ``pwd``.
 
@@ -209,3 +212,25 @@ renders in HTML as:
     
 From here we refer you to the
 `matplotlib plot directive documentation <https://matplotlib.org/devel/plot_directive.html>`_.
+
+Math (LaTeX)
+^^^^^^^^^^^^
+
+Sphinx can render LaTeX typeset math in the browser (using
+`MathJax <https://www.mathjax.org/>`_). This rst code:
+
+.. code-block:: rst
+
+   .. math::
+
+       \int_0^a x\,dx = \frac{1}{2}a^2
+
+renders in HTML as:
+
+.. math::
+
+    \int_0^a x\,dx = \frac{1}{2}a^2
+
+This notation can also be used in docstrings. For example, we could add
+the equation of Snell's Law to the docstring of
+:func:`~example.refraction.snell`.

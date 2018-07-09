@@ -63,3 +63,11 @@ Just type ``doctr configure`` and follow the prompts. Example:
     The docs should now build automatically on Travis.
 
     See the documentation at https://drdoctr.github.io/ for more information.
+
+Another popular option for publishing documentation is
+`https://readthedocs.org/ <https://readthedocs.org/>`_ . We slightly prefer
+using Travis-CI + GitHub Pages because it is easier to debug any installation
+issues. It is also more efficient: we have to build the documentation on
+Travis-CI anyway to verify that any changes haven't broken them, so we might as
+well upload the result and be done, rather than having readthedocs build them
+again.
