@@ -7,4 +7,5 @@ numpy
 numpydoc
 pexpect
 sphinx
+sphinx-copybutton
 sphinx_rtd_theme
