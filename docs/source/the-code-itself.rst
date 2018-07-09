@@ -167,16 +167,15 @@ The cookiecutter template included an example test suite with one test:
 Before writing our own test, let's practice running that test to check that
 everything is working.
 
-First, install the "development requirements" for our package. These are
-third-party Python packages that aren't necessary to *use* our package, but are
-necessary to *develop* it (run tests, build the documentation). The cookiecutter
-template has listed some defaults in ``requirements-dev.txt``.
+.. important::
 
-.. code-block:: bash
+   We assume you have installed the "development requirements," as covered
+   in :doc:`preliminaries`. If you are not sure whether you have, there is no
+   harm in running this a second time:
 
-   python3 -m pip install --upgrade -r requirements-dev.txt
+   .. code-block:: bash
 
-Now run the tests like so.
+      python3 -m pip install --upgrade -r requirements-dev.txt
 
 .. code-block:: bash
 
@@ -249,6 +248,16 @@ The cookiecutter configured ``flake8`` for this purpose. Flake8 checks for
 `PEP8 <https://www.python.org/dev/peps/pep-0008/?#introduction>`_. Enforcing
 consistent style helps projects stay easy to read and maintain as they grow.
 While not all projects strictly enfore PEP8, we generally recommend it.
+
+.. important::
+
+   We assume you have installed the "development requirements," as covered
+   in :doc:`preliminaries`. If you are not sure whether you have, there is no
+   harm in running this a second time:
+
+   .. code-block:: bash
+
+      python3 -m pip install --upgrade -r requirements-dev.txt
 
 .. code-block:: bash
 

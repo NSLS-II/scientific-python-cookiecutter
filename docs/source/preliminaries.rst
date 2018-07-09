@@ -240,5 +240,15 @@ template.
 
       >>> import your_package_name
 
+#. Looking ahead, we'll also need the "development requirements" for our
+   package. These are third-party Python packages that aren't necessary to
+   *use* our package, but are necessary to *develop* it (run tests, build the
+   documentation). The cookiecutter template has listed some defaults in
+   ``requirements-dev.txt``. Install them now.
+
+  .. code-block:: bash
+
+     python3 -m pip install --upgrade -r requirements-dev.txt
+
 Now we have a working but empty Python project. In the next section, we'll
 start moving your scientific code into the project.
