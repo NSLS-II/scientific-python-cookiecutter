@@ -37,17 +37,27 @@ remove the line that does ``flake8`` style-checking.
 Activate Travis-CI for Your GitHub Repository
 ---------------------------------------------
 
-.. warning::
+#. Go to https://travis-ci.org and sign in with your GitHub account.
+#. You will be prompted to authorize Travis-CI to access your GitHub account.
+   Authorize it.
+#. You will be redirected to https://travis-ci.org/profile, which shows a list
+   of your GitHub repositories. If necessary, click the "Sync Account" button
+   to refresh that list.
+#. Find your new repository in the list. Click the on/off switch next to its
+   name activate Travis-CI on that repository.
+#. Click the repository name, which will direct you to the list of *builds* at
+   ``https://travis-ci.org/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/builds``. The
+   list will currently be empty. You'll see construction cones.
+#. The next time you open a pull request or push a new commit to the master
+   branch, Travis-CI will kick off a new build, and that list will update.
 
-   The following instructions are not yet well tested.
-   `Feedback is welcome!  <https://github.com/NSLS-II/packaging-scientific-python/issues/new>`_
+.. note::
 
-1. Go to https://travis-ci.org and sign in with your GitHub account.
-2. Go to https://travis-ci.org/profile, which shows a list of your GitHub
-   repositories. Click the "Sync Account" button to refresh that list.
-3. Find your Python package in the list, and click the on/off switch to
-   activate Travis-CI on that repository.
-
-The next time you open a pull request or push a new commit to the master
-branch, Travis-CI will kick off a *build*, which you can see at
-``https://travis-ci.org/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/builds``.
+    If this repository belongs to a GitHub *organization* (e.g.
+    http://github.com/NSLS-II) as opposed to a personal user account
+    (e.g. http://github.com/danielballan) you should follow Steps 3-5
+    above for the organization's profile at
+    ``https://travis-ci.org/profile/YOUR_GITHUB_ORGANIZATION``. It does no
+    harm to *also* activate Travis-CI for your personal fork at
+    ``https://travis.org/profile``, but it's more important to activate it for
+    the upstream fork associated with the organization.
