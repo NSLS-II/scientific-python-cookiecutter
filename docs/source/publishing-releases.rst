@@ -8,6 +8,13 @@ In this section you will:
 * Upload it to `PyPI <https://pypi.org/>`_ (Python Package Index) so that
   users can download and install it using pip.
 
+We strongly encourage you to share your code GitHub from the start, which is
+why we covered it in :doc:`preliminaries`. People often overestimate the risks
+and underestimate the benefits of making their research code public, and the
+idea of waiting to make it public "until it's cleaned up" is a punchline, an
+exercise in infinite regress. But *releases* are little different: you should
+wait to publish a release until your package is usable and tested.
+
 #. Choose a version number. The convention following by most scientific Python
    packages is ``vMAJOR.MINOR.MICRO``, as in ``v1.3.0``. A good number to start
    with is ``v0.1.0``.
