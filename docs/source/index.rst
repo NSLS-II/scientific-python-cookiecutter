@@ -39,5 +39,6 @@ Starting from a working, full-featured template, you will:
    publishing-releases
    guiding-design-principles
    advanced-testing
+   environments
    further-reading
    notes-for-experts

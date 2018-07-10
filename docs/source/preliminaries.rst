@@ -20,7 +20,32 @@ template.
   
       python3 --version
   
-   If necessary, install it by your method of choice (apt, Homebrew, conda, etc.).
+   If necessary, install it by your method of choice.
+   `Anaconda <https://conda.io/docs/user-guide/install/index.html>`_ is a good
+   method for beginners.
+
+#. Create an *environment*, a sandboxed area for installing software that is
+   separate from the system defaults. This is not essential, but it is
+   strongly encouraged. It ensures that your project and its software
+   dependencies will not interfere with other Python software on your system.
+   There are several tools for this. (Conda users: see :doc:`environments`.)
+   But the simplest is Python's built-in ``venv`` (short for "virtual
+   environments"), illustrated here.
+
+   Do this once:
+
+   .. code-block:: bash
+
+      python3 -m venv my-env
+
+   The term ``my-env`` can be anything. It names the new environment.
+
+   Do this every time you open up a new Terminal / Command Prompt to work on
+   your project:
+
+   .. code-block:: bash
+
+      . my-env/bin/activate
 
 #. Verify that you have git installed.
 
