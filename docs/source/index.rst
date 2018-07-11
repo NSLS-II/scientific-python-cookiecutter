@@ -3,11 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Packaging Scientific Python
-===========================
+Bootstrap a Scientific Python Library
+=====================================
 
-This is a tutorial with a template for packaging, documenting, and testing
-scientific Python code.
+This is a tutorial with a template for packaging, testing, documenting, and
+publishing scientific Python code.
 
 Do you have a folder of disorganized scientific Python scripts? Are you always
 hunting for code snippets scattered across dozens of Jupyter notebooks? Has it
