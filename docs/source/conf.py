@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Packaging Scientific Python documentation build configuration file, created by
+# Scientific Python Cookiecutter documentation build configuration file, created by
 # sphinx-quickstart on Thu Jun 28 12:35:56 2018.
 #
 # This file is execfile()d with the current directory set to its
@@ -67,7 +67,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Packaging Scientific Python'
+project = 'Scientific Python Cookiecutter'
 copyright = '2018, Contributors'
 author = 'Contributors'
 
@@ -135,7 +135,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'PackagingScientificPythondoc'
+htmlhelp_basename = 'ScientificPythonCookiecutterdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -162,7 +162,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'PackagingScientificPython.tex', 'Packaging Scientific Python Documentation',
+    (master_doc, 'ScientificPythonCookiecutter.tex', 'Scientific Python Cookiecutter Documentation',
      'Contributors', 'manual'),
 ]
 
@@ -172,7 +172,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'packagingscientificpython', 'Packaging Scientific Python Documentation',
+    (master_doc, 'scientificpythoncookiecutter', 'Scientific Python Cookiecutter Documentation',
      [author], 1)
 ]
 
@@ -183,8 +183,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'PackagingScientificPython', 'Packaging Scientific Python Documentation',
-     author, 'PackagingScientificPython', 'One line description of project.',
+    (master_doc, 'ScientificPythonCookiecutter', 'Scientific Python Cookiecutter Documentation',
+     author, 'ScientificPythonCookiecutter', 'One line description of project.',
      'Miscellaneous'),
 ]
 

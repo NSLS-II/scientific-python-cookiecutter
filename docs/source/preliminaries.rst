@@ -52,7 +52,7 @@ template.
 
    .. code-block:: bash
 
-      cookiecutter https://github.com/NSLS-II/packaging-scientific-python
+      cookiecutter https://github.com/NSLS-II/scientific-python-cookiecutter
       full_name [Name or Organization]: Brookhaven National Lab
       email []: dallan@bnl.gov
       github_username []: danielballan
