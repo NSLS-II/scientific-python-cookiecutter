@@ -55,7 +55,7 @@ In this section you will:
 
       git tag -a vX.Y.Z  # Don't forget the leading v
 
-   This will create a tag named ``vX.Y.Z``. The ``-a`` flag (optional but
+   This will create a tag named ``vX.Y.Z``. The ``-a`` flag (strongly
    recommended) opens up a text editor where you should enter a brief
    description of the release, such as "This releases fixes some bugs but does
    not introduce any breaking changes. All users are encouraged to upgrade."
