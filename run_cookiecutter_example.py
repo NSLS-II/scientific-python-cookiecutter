@@ -30,5 +30,8 @@ p.sendline('')
 p.expect('year .*')
 p.sendline('')
 
+p.expect('Select minimum_supported_python_version.*')
+p.sendline('')
+
 # Runs until the cookiecutter is done; then exits.
 p.interact()
