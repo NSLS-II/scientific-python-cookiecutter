@@ -58,3 +58,8 @@ machine.
 .. code-block:: bash
 
    conda activate my-env
+
+The use of virtual environments leads to multiple instances of ``python``,
+``pip``, ``ipython``, ``pytest``, ``flake8`` and other executables on your
+machine. If you encounter unexpected behavior, use ``which ____`` to see which
+environment a given command is coming  from. (Linux and OSX only.)
