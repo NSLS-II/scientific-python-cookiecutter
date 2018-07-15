@@ -72,7 +72,7 @@ wait to publish a release until your package is usable and tested.
    The version is reported in three places:
 
    1. The git tag
-   2. The version parameter in the ``setup.py`` file
+   2. The ``setup(version=...)`` parameter in the ``setup.py`` file
    3. Your package's ``__version__`` attribute, in Python
 
    `Versioneer <https://github.com/warner/python-versioneer>`_, which was
@@ -106,6 +106,14 @@ wait to publish a release until your package is usable and tested.
    .. code-block:: bash
 
       python3 -m pip install --upgrade twine
+
+#. Remove any extraneous files. If you happen to have any important files in
+your project directory that are not committed to git, move them first; this
+will delete them!
+
+   .. code-block:: bash
+
+      git clean -dfx
 
 #. Publish a release on PyPI.
 
