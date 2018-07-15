@@ -9,7 +9,12 @@ Collaborate
 -----------
 
 Software developed by several people is preferable to software developed by
-one.
+one. By adopting the conventions and tooling used by many other scientific
+software projects, you are well on your way to making it easy for others to
+contribute. Familiarity works in both directions: it will be easier for others
+to understand and contribute to your project, and it will be easier for you to
+use other popular open-source scientific software projects and modify them to
+your purposes.
 
 Talking through a design and the assumptions in it helps to clarify your
 thinking. To quote the
@@ -33,7 +38,8 @@ Don't Be Afraid to Refactor
 No code is ever right the first (or second) time.
 
 Refactoring the code once you understand the problem and the design trade-offs
-more fully helps keep the code maintainable.
+more fully helps keep the code maintainable. Version control, tests, and
+linting are your safety net, empowering you to make changes with confidence.
 
 Prefer "Wide" over "Deep"
 -------------------------
@@ -82,6 +88,17 @@ possible range of input types.
 "Stop Writing Classes"
 ----------------------
 
+Not everything needs to be object-oriented. Object-oriented design frequently
+does not add value in scientific computing.
+
+.. epigraph::
+
+   It is better to have 100 functions operate on one data structure than 10
+   functions on 10 data structures.
+
+   -- From ACM's SIGPLAN publication, (September, 1982), Article "Epigrams in
+   Programming", by Alan J. Perlis of Yale University.
+
 It is often tempting to invent special objects for a use case or workflow ---
 an ``Image`` object or a ``DiffractionAnalysis`` object. This approach has
 proven again and again to be difficult to extend and maintain. It is better to
@@ -100,6 +117,34 @@ plain old numpy arrays. All scientific Python libraries understand numpy
 arrays, but they don't understand custom classes, so it is better to pass
 application-specific metadata *alongside* a standard array than to try to
 encapsulate all of that information in a new, bespoke object.
+
+Permissiveness Isn't Always Convenient
+--------------------------------------
+
+Overly permissive code can lead to very confusing bugs. If you need a flexible
+user-facing interface that tries to "do the right thing" by guessing what the
+users wants, separate it into two layers: a thin "friendly" layer on top of a
+"cranky" layer that takes in only exactly what it needs and does the actual
+work. It should be easy to test, constrained about what it accepts and what
+it returns. The layered design makes it possible to write *many* such friendly
+layers with different opinions and different defaults.
+
+When it doubt, make function arguments required. Optional arguments are harder
+to discover and can hide important choices that the user should know that they
+are making.
+
+Exceptions should just be raised: don't catch them and print. Exceptions are a
+tool for being clear about what the code needs and letting the caller decide
+what to do about it. *Application* code (e.g. GUIs) should catch and handle
+errors to avoid crashing, but *library* code should generally raise errors
+unless it is sure how the user or the caller wants to handle them.
+
+Write Useful Error Messages
+---------------------------
+
+Be specific. Include what the wrong value was and what was wrong with it.
+Suggest examples. For example, if the code fails to locate a file it needs,
+it should say what it was looking for and where it looked.
 
 Complexity is Always Conserved
 ------------------------------
@@ -122,11 +167,54 @@ into this:
     def get_image(filename, options={}):
         ...
 
-Although the complexity appears to have been reduced through hidden keyword
-arguments, it has been slightly complicated through the need to dig through
-more documentation to better understand how to use them.
+Although the interface appears to have been simplified through hidden keyword
+arguments, now the user needs to remember what the ``options`` are or dig
+through documentation to better understand how to use them.
 
 Because new science occurs when old ideas are reapplied or extended in
 unforeseen ways, scientific code should not bury its complexity or overly
 optimize for a specific use case. It should expose what complexity there is
 straightforwardly.
+
+.. note::
+
+    Even better, you should consider using "keyword-only" arguments, introduced
+    in Python 3, which require the user to pass an argument by keyword rather
+    than position.
+
+    .. code-block:: python
+
+        get_image(filename, *, normalize=True, beginning=0, end=None):
+            ...
+
+    Every argument after the ``*`` is keyword-only. Therefore, the usage
+    ``get_image(filename, True)`` will not be allowed; the caller must
+    explicitly type ``get_image(filename, normalize=True)``. The latter is
+    easier to read, and it now possible for the author to insert additional
+    parameters without breaking backward compatibility.
+
+Similarly, it is common for new software developers to prefer one function with
+many options to several functions with fewer options. The advantages of "many
+small functions" reveal themselves in time:
+
+* Small functions are easier to explain and document because their behavior is
+  well-scoped.
+* Small functions can be tested individually, and it is easy to see which paths
+  have and have not yet been tested.
+* It is easier to compose and reuse functions with well-defined behavior in
+  other contexts. This is called *the UNIX philosophy:* do one thing and do it
+  well.
+* The more options a function accepts, the more possible interactions they
+  have, which can be confusing for the user and difficult for the author to
+  reason about and test. In particular, *coupled* arguments whose meaning
+  depends on other arguments should be avoided.
+* Large functions with many optional parameters often want to return different
+  types of things depending on the value of some optional parameter. This puts
+  the burden on the caller to check what has been returned, and it makes the
+  code harder to test. Generally, it is better to adhere to "return type
+  stability". Functions should return the same kind of thing no matter what
+  their arguments, particularly their optional arguments.
+
+Some of the power of Python is its flexibility. It accommodates many possible
+design choices. It requires some forethought and judgement to build tools that
+last and grow well over time.
