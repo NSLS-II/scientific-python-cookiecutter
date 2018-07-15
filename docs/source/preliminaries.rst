@@ -14,13 +14,45 @@ template.
 
 #. `Sign up for GitHub <http://github.com/>`_.
 
-#. Verify that you have Python 3.6+.
+#. Verify that you have Python 3.
 
    .. code-block:: bash
   
       python3 --version
   
-   If necessary, install it by your method of choice (apt, Homebrew, conda, etc.).
+   If necessary, install it by your method of choice: apt, Homebrew, conda,
+   etc.
+
+#. Create an *environment*, a sandboxed area for installing software that is
+   separate from the system defaults. This is not essential, but it is
+   strongly encouraged. It ensures that your project and its software
+   dependencies will not interfere with other Python software on your system.
+   There are several tools for this.  But the simplest is Python's built-in
+   ``venv`` (short for "virtual environments"), illustrated here.
+
+   Do this once:
+
+   .. code-block:: bash
+
+      python3 -m venv my-env
+
+   The term ``my-env`` can be anything. It names the new environment.
+
+   Do this every time you open up a new Terminal / Command Prompt to work on
+   your project:
+
+   .. code-block:: bash
+
+      . my-env/bin/activate
+
+   .. note::
+
+      If you are a conda user, you may prefer a conda environment:
+
+      .. code-block:: bash
+
+         conda create -n my-env python=3.6
+         conda activate my-env
 
 #. Verify that you have git installed.
 
@@ -50,6 +82,13 @@ template.
 #. Generate a new Python project using our cookiecutter template. Just
    following the prompts. The default suggestion is given in square brackets.
 
+   For the last question, ``minimum_supported_python_version``, we recommend
+   supporting only back to Python 3.6 so you can use features not available in
+   Python 3.4 or 3.5. But we allow for the possibility that you may need to
+   support older versions depending on your circumstances. Again, you can use
+   ``python3 --verison`` to check what version of Python is currently available
+   on your machine.
+
    .. code-block:: bash
 
       cookiecutter https://github.com/NSLS-II/scientific-python-cookiecutter
@@ -62,6 +101,11 @@ template.
       repo_name [example]:
       project_short_description [Python package for doing science.]: Example package for docs.
       year [2018]:
+      Select minimum_supported_python_version:
+      1 - Python 3.6
+      2 - Python 3.5
+      3 - Python 3.4
+      Choose from 1, 2, 3 [1]:
 
    This generates a new directory, ``example`` in this case, with all the
    "scaffolding" of a working Python project.

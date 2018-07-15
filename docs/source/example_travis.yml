@@ -1,6 +1,8 @@
+# .travis.yml
+
 language: python
 python:
-  - {{ cookiecutter.minimum_supported_python_version }}
+  - 3.6
 cache:
   directories:
     - $HOME/.cache/pip
