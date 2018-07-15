@@ -12,6 +12,16 @@ We recommend `doctr <https://drdoctr.github.io/doctr/>`_ a tool that configures
 Travis-CI to automatically publish your documentation every time the master
 branch is updated.
 
+.. important::
+
+   We assume you have installed the "development requirements," as covered
+   in :doc:`preliminaries`. If you are not sure whether you have, there is no
+   harm in running this a second time:
+
+   .. code-block:: bash
+
+      python3 -m pip install --upgrade -r requirements-dev.txt
+
 Just type ``doctr configure`` and follow the prompts. Example:
 
 .. code-block:: bash

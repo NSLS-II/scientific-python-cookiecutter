@@ -161,6 +161,17 @@ functions for converting between radians and degrees.
     np.deg2rad(90)  # pi / 2
     np.rad2deg(np.pi / 2)  # 90.0
 
+To render short code expressions inline, surround them with back-ticks. This:
+
+.. code-block:: rst
+
+    Try ``snell(0, 1, 1.33)``.
+
+renders in HTML as:
+
+
+Try ``snell(0, 1, 1.33)``.
+
 From here we refer you to the
 `sphinx code example documentation <http://www.sphinx-doc.org/en/stable/markup/code.html>`_.
 
@@ -234,3 +245,34 @@ renders in HTML as:
 This notation can also be used in docstrings. For example, we could add
 the equation of Snell's Law to the docstring of
 :func:`~example.refraction.snell`.
+
+Math can also be written inline. This rst code:
+
+.. code-block:: rst
+
+   The value of :math:`\pi` is 3.141592653....
+
+renders in HTML as:
+
+   The value of :math:`\pi` is 3.141592653....
+
+Referencing Documented Objects
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can create links to documented functions like so:
+
+.. code-block:: rst
+
+   The :func:`example.refraction.snell` function encodes Snell's Law.
+
+The :func:`example.refraction.snell` function encodes Snell's Law.
+
+Adding a ``~`` omits the module path from the link text.
+
+.. code-block:: rst
+
+   The :func:`~example.refraction.snell` function encodes Snell's Law.
+
+The :func:`~example.refraction.snell` function encodes Snell's Law.
+
+See `the Sphinx documentation <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ for more.
