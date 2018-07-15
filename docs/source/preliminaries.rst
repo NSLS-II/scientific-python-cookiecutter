@@ -45,6 +45,15 @@ template.
 
       . my-env/bin/activate
 
+   .. note::
+
+      If you are a conda user, you may prefer a conda environment:
+
+      .. code-block:: bash
+
+         conda create -n my-env python=3.6
+         conda activate my-env
+
 #. Verify that you have git installed.
 
    .. code-block:: bash
