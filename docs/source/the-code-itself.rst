@@ -372,7 +372,3 @@ second module --- say, ``example.utils``. Some brief advice:
 
 * Take care to avoid circular imports, wherein two modules each import the
   other.
-
-In the next section, we'll use a free Continuous Integration service to run
-pytest and (optionally) flake8 automatically whenever a change is made or
-proposed.

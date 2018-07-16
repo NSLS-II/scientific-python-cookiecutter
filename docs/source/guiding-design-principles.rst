@@ -32,6 +32,8 @@ If you can bring together contributors with diverse scientific backgrounds, it
 becomes easier to identify functionality that should be generalized for reuse
 by different fields.
 
+.. _refactor:
+
 Don't Be Afraid to Refactor
 ---------------------------
 
@@ -194,9 +196,10 @@ straightforwardly.
     easier to read, and it enables the author to insert additional parameters
     without breaking backward compatibility.
 
-Similarly, it is common for new software developers to prefer one function with
-many options to several functions with fewer options. The advantages of "many
-small functions" reveal themselves in time:
+Similarly, it can be tempting to write one function that performs multiple
+steps and has many options instead of multiple functions that do a single step
+and have few options. The advantages of "many small functions" reveal
+themselves in time:
 
 * Small functions are easier to explain and document because their behavior is
   well-scoped.
@@ -204,18 +207,23 @@ small functions" reveal themselves in time:
   have and have not yet been tested.
 * It is easier to compose a function with other functions and reuse it in an
   unanticipated way if its behavior is well-defined and tightly scoped. This is
-  called *the UNIX philosophy:* "Do one thing and do it well."
-* The more options a function accepts, the more possible interactions they
-  have, which can be confusing for the user and difficult for the author to
-  reason about and test. In particular, *coupled* arguments whose meaning
-  depends on other arguments should be avoided.
-* Large functions with many optional parameters often want to return different
-  types of things depending on the value of some optional parameter. This puts
-  the burden on the caller to check what has been returned, and it makes the
-  code harder to test. Generally, it is better to adhere to "return type
-  stability". Functions should return the same kind of thing no matter what
-  their arguments, particularly their optional arguments.
+  `the UNIX philosophy <https://en.wikipedia.org/wiki/Unix_philosophy>`_:
+  "Do one thing and do it well."
+* The number of possible interactions between arguments goes up with the number
+  of arguments, which makes the function difficult to reason about and test. In
+  particular, arguments whose meaning depends on other arguments should be
+  avoided.
 
-Some of the power of Python is its flexibility. It accommodates many possible
-design choices. With some forethought and judgement, it can be used to build
-tools that last and grow well over time.
+Functions should return the same kind of thing no matter what their arguments,
+particularly their optional arguments.  Violating "return type stability" puts
+a burden on the function's caller, which now must understand the internal
+details of the function to know what type to expect for any given input. That
+makes the function harder to document, test, and use.  Python does not enforce
+return type stability, but we should try for it anyway.  If you have a function
+that returns different types of things depending on its inputs, that is a sign
+that it should be :ref:`refactored <refactor>` into multiple functions.
+
+Python is incredibly flexible. It accommodates many possible design choices.
+By exercising some restraint and consistency with the scientific Python
+ecosystem, Python can be used to build scientific tools that last and grow well
+over time.
