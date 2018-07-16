@@ -189,8 +189,8 @@ straightforwardly.
             ...
 
     Every argument after the ``*`` is keyword-only. Therefore, the usage
-    ``get_image(filename, True)`` will not be allowed; the caller must
-    explicitly type ``get_image(filename, normalize=True)``. The latter is
+    ``get_image('thing.png', False)`` will not be allowed; the caller must
+    explicitly type ``get_image('thing.png', normalize=False)``. The latter is
     easier to read, and it enables the author to insert additional parameters
     without breaking backward compatibility.
 
