@@ -74,7 +74,8 @@ Duck Typing is a Good Idea
 --------------------------
 
 `Duck typing <https://en.wikipedia.org/wiki/Duck_typing>`_ treats objects based
-on what they can *do*, not based on what type they *are*.
+on what they can *do*, not based on what type they *are*. "If it walks like a
+duck and it quacks like a duck, then it must be a duck."
 
 Python in general and scientific Python in particular leverage *interfaces* to
 support interoperability and reuse. For example, it is possible to pass a
@@ -106,7 +107,7 @@ prefer standard, simple data structures like Python dictionaries and numpy
 arrays and use simple functions to operate on them.
 
 A popular talk, "Stop Writing Classes," which you can
-`watch on YouTube <https://www.youtube.com/watch?v=o9pEzgHorH0&t=193s>`_
+`watch on YouTube <https://www.youtube.com/watch?v=o9pEzgHorH0&t=193s>`_,
 illustrates how some situations that *seem* to lend themselves to
 object-oriented programming are much more simply handled using plain, built-in
 data structures and functions.
@@ -125,9 +126,9 @@ Overly permissive code can lead to very confusing bugs. If you need a flexible
 user-facing interface that tries to "do the right thing" by guessing what the
 users wants, separate it into two layers: a thin "friendly" layer on top of a
 "cranky" layer that takes in only exactly what it needs and does the actual
-work. It should be easy to test, constrained about what it accepts and what
-it returns. The layered design makes it possible to write *many* such friendly
-layers with different opinions and different defaults.
+work. The cranky layer should be easy to test; it should be constrained about
+what it accepts and what it returns. This layered design makes it possible to
+write *many* friendly layers with different opinions and different defaults.
 
 When it doubt, make function arguments required. Optional arguments are harder
 to discover and can hide important choices that the user should know that they
@@ -142,9 +143,9 @@ unless it is sure how the user or the caller wants to handle them.
 Write Useful Error Messages
 ---------------------------
 
-Be specific. Include what the wrong value was and what was wrong with it.
-Suggest examples. For example, if the code fails to locate a file it needs,
-it should say what it was looking for and where it looked.
+Be specific. Include what the wrong value was, what was wrong with it, and
+perhaps how it might be fixed. For example, if the code fails to locate a file
+it needs, it should say what it was looking for and where it looked.
 
 Complexity is Always Conserved
 ------------------------------
@@ -190,8 +191,8 @@ straightforwardly.
     Every argument after the ``*`` is keyword-only. Therefore, the usage
     ``get_image(filename, True)`` will not be allowed; the caller must
     explicitly type ``get_image(filename, normalize=True)``. The latter is
-    easier to read, and it now possible for the author to insert additional
-    parameters without breaking backward compatibility.
+    easier to read, and it enables the author to insert additional parameters
+    without breaking backward compatibility.
 
 Similarly, it is common for new software developers to prefer one function with
 many options to several functions with fewer options. The advantages of "many
@@ -201,9 +202,9 @@ small functions" reveal themselves in time:
   well-scoped.
 * Small functions can be tested individually, and it is easy to see which paths
   have and have not yet been tested.
-* It is easier to compose and reuse functions with well-defined behavior in
-  other contexts. This is called *the UNIX philosophy:* do one thing and do it
-  well.
+* It is easier to compose a function with other functions and reuse it in an
+  unanticipated way if its behavior is well-defined and tightly scoped. This is
+  called *the UNIX philosophy:* "Do one thing and do it well."
 * The more options a function accepts, the more possible interactions they
   have, which can be confusing for the user and difficult for the author to
   reason about and test. In particular, *coupled* arguments whose meaning
@@ -216,5 +217,5 @@ small functions" reveal themselves in time:
   their arguments, particularly their optional arguments.
 
 Some of the power of Python is its flexibility. It accommodates many possible
-design choices. It requires some forethought and judgement to build tools that
-last and grow well over time.
+design choices. With some forethought and judgement, it can be used to build
+tools that last and grow well over time.
