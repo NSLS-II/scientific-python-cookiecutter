@@ -32,12 +32,12 @@ Starting from a working, full-featured template, you will:
 
    preliminaries
    the-code-itself
+   guiding-design-principles
    ci
    writing-docs
    including-data-files
    publishing-docs
    publishing-releases
-   guiding-design-principles
    advanced-testing
    environments
    further-reading
