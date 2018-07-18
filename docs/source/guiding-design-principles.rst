@@ -149,6 +149,14 @@ Be specific. Include what the wrong value was, what was wrong with it, and
 perhaps how it might be fixed. For example, if the code fails to locate a file
 it needs, it should say what it was looking for and where it looked.
 
+Write for Readability
+---------------------
+
+Unless you are writing a script that you plan to delete tomorrow or next week,
+your code will probably be read many more times than it is written. And today's
+"temporary solution" often becomes tomorrow's critical code. Therefore,
+optimize for clarity over brevity, using descriptive and consistent names.
+
 Complexity is Always Conserved
 ------------------------------
 
