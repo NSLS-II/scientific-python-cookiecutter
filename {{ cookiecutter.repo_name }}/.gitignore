@@ -57,6 +57,9 @@ coverage.xml
 docs/build/
 docs/source/generated/
 
+# pytest
+.pytest_cache/
+
 # PyBuilder
 target/
 
