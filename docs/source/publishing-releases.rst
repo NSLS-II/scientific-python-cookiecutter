@@ -108,8 +108,8 @@ wait to publish a release until your package is usable and tested.
       python3 -m pip install --upgrade twine
 
 #. Remove any extraneous files. If you happen to have any important files in
-your project directory that are not committed to git, move them first; this
-will delete them!
+   your project directory that are not committed to git, move them first; this
+   will delete them!
 
    .. code-block:: bash
 
