@@ -125,3 +125,8 @@ wait to publish a release until your package is usable and tested.
 
 The package is now installable with pip. It may take a couple minutes to become
 available.
+
+If you would also like to make your package available via conda, we recommend
+conda-forge, a community-led collection of recipes and build infrastructure.
+See in particular
+`the section of the conda-forge documentation on adding a recipe <https://conda-forge.org/#add_recipe>`_.
