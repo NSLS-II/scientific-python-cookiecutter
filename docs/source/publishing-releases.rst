@@ -41,9 +41,15 @@ wait to publish a release until your package is usable and tested.
    lossy representation of how painful it will be for the user to upgrade.
 
 #. Update ``release-history.rst`` in the documentation if you have not done so
-   already. (See :doc:`writing-docs`.) It must address any breaking changes
-   that could require users of your Python package to change their code. It may
-   also highlight any additions, improvements, and bug fixes.
+   already. (See :doc:`writing-docs`.)  For the first tagged release, you don't
+   need to write much --- some projects just write "Initial release" under the
+   heading with the version and release date. But for every subsequent release,
+   you should list any alterations that could require users of your Python
+   package to change their code. You may also highlight any additions,
+   improvements, and bug fixes. As examples, see the release notes for
+   `the release notes for this small project <https://nsls-ii.github.io/caproto/release-notes.html>`_
+   and
+   `this large project <https://pandas.pydata.org/pandas-docs/stable/whatsnew.html>`_.
 
 #. Type ``git status`` and check that you are on the ``master`` branch with no
    uncommitted code.
