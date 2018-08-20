@@ -7,6 +7,7 @@ Other Tutorials and Articles
 
 * `Official Python Packaging Guide <https://packaging.python.org/>`_
 * `"SettingUpOpenSource" lesson plans by John Leeman <https://jrleeman.github.io/SettingUpOpenSource>`_
+* `"Structuring your Project" (written from the perspective of Python for web applications, as opposed to scientific libraries) <https://docs.python-guide.org/writing/structure/>`_
 
 Other Python Cookiecutters
 --------------------------
