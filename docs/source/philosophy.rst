@@ -17,6 +17,12 @@ Python community and the personal experience of the authors.
 The Tools, and the Problems They Solve
 --------------------------------------
 
+..
+   Note: The bolded items here are intentionally not links. These things are
+   easy enough to Google if people want to know more, and I'd like to avoid
+   scaring anyone off by making them feel like they need to review the project
+   home pages for each of these projects before proceeding.
+
 * **Python 3** has been around since 2008, and it gained real traction in the
   scientific Python ecosystem around 2014. It offers
   `many benefits for scientific applications <https://python-3-for-scientists.readthedocs.io/en/latest/>`_.

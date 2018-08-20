@@ -19,9 +19,9 @@ If you are looking for a recommendation for beginners, the `Atom Editor
 Linux or OSX and Notebook on Windows will get you up and running.
 
 Reading the steps the follow, you might reasonably wonder, "Why isn't there
-just an automated script for this? Or even a GUI?" We prefer to do this process
-manually so that we are forced to think carefully about each step, notice
-when something goes wrong, and debug if necessary.
+just an automated script for this?" We prefer to do this process manually so
+that we are forced to think carefully about each step, notice when something
+goes wrong, and debug if necessary. We recommend you do the same.
 
 #. `Sign up for GitHub <http://github.com/>`_.
 
