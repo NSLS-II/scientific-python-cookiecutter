@@ -12,6 +12,17 @@ In this section you will:
 Then, in the next section, we will begin to move your scientific code into that
 template.
 
+You will need a Terminal (Windows calls it a "Command Prompt") and a plain text
+editor. Any will do; we won't assume anything about the editor you are using.
+If you are looking for a recommendation for beginners, the `Atom Editor
+<https://atom.io/>`_ by GitHub is a good one. For minimalists, ``nano`` on
+Linux or OSX and Notebook on Windows will get you up and running.
+
+Reading the steps the follow, you might reasonably wonder, "Why isn't there
+just an automated script for this? Or even a GUI?" We prefer to do this process
+manually so that we are forced to think carefully about each step, notice
+when something goes wrong, and debug if necessary.
+
 #. `Sign up for GitHub <http://github.com/>`_.
 
 #. Verify that you have Python 3.
