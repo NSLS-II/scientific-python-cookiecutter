@@ -6,6 +6,7 @@ matplotlib
 numpy
 numpydoc
 pexpect
+pytest
 sphinx
 sphinx-copybutton
 sphinx_rtd_theme
