@@ -30,6 +30,7 @@ Starting from a working, full-featured template, you will:
 .. toctree::
    :maxdepth: 2
 
+   philosophy
    preliminaries
    the-code-itself
    guiding-design-principles
@@ -41,4 +42,3 @@ Starting from a working, full-featured template, you will:
    advanced-testing
    environments
    further-reading
-   notes-for-experts

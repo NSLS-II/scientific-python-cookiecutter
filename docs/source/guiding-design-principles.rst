@@ -17,10 +17,7 @@ use other popular open-source scientific software projects and modify them to
 your purposes.
 
 Talking through a design and the assumptions in it helps to clarify your
-thinking. To quote the
-`Zen of Python <https://www.python.org/dev/peps/pep-0020/#id3>`_,
-"If the implementation is hard to explain, it's a bad idea. If the
-implementation is easy to explain, it may be a good idea."
+thinking.
 
 Collaboration takes trust. It is OK to be "wrong"; it is part of the process
 of making things better.
