@@ -93,6 +93,14 @@ wait to publish a release until your package is usable and tested.
       import your_package
       your_package.__version__  # should be 'X.Y.Z'
 
+   Incidentally, once you resume development and add the first commit after
+   this tag, ``__version__`` will take on a value like ``X.Y.Z+1.g58ad5f7``,
+   where ``+1`` means "1 commit past version X.Y.Z" and ``58ad5f7`` is the
+   first 7 characters of the hash of the current commit. The letter ``g``
+   stands for "git". This is all managed automatically by versioneer and in
+   accordance with the specification in
+   `PEP 440 <https://www.python.org/dev/peps/pep-0440/>`_.
+
 #. Push the new commit and the tag to ``master``.
 
    .. code-block:: bash
