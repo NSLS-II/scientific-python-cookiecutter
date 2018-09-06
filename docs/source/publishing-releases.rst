@@ -15,13 +15,14 @@ idea of waiting to make it public "until it's cleaned up" is a punchline, an
 exercise in infinite regress. But *releases* are little different: you should
 wait to publish a release until your package is usable and tested.
 
-#. Choose a version number. The convention following by most scientific Python
+#. Choose a version number. The convention followed by most scientific Python
    packages is ``vMAJOR.MINOR.MICRO``, as in ``v1.3.0``. A good number to start
    with is ``v0.1.0``.
 
    These numbers have meanings.
    The goal is to communicate to the user whether upgrading will break anything
-   in *their* code that will need to be updated in turn.
+   in *their* code that will need to be updated in turn. This is
+   `semantic versioning <https://semver.org/>`_.
    
    * Incrementing the ``MICRO`` number (``v1.3.0`` -> ``v1.3.1``) means, "I
      have fixed some bugs, but I have not added any major new features or
