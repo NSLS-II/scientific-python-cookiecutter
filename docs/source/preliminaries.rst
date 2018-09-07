@@ -18,7 +18,7 @@ If you are looking for a recommendation for beginners, the `Atom Editor
 <https://atom.io/>`_ by GitHub is a good one. For minimalists, ``nano`` on
 Linux or OSX and Notebook on Windows will get you up and running.
 
-Reading the steps the follow, you might reasonably wonder, "Why isn't there
+Reading the steps that follow, you might reasonably wonder, "Why isn't there
 just an automated script for this?" We prefer to do this process manually so
 that we are forced to think carefully about each step, notice when something
 goes wrong, and debug if necessary. We recommend you do the same.
