@@ -7,7 +7,7 @@ import versioneer
 # NOTE: This file must remain Python 2 compatible for the foreseeable future,
 # to ensure that we error out properly for people with outdated setuptools
 # and/or pip.
-min_version = (cookiecutter.minimum_supported_python_version [0], cookiecutter.minimum_supported_python_version [2])
+min_version = ({{ cookiecutter.minimum_supported_python_version [0] }}, {{ cookiecutter.minimum_supported_python_version [2] }})
 if sys.version_info < min_version:
     error = """
 {{ cookiecutter.package_dist_name }} does not support Python {0}.{1}.
