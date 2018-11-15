@@ -13,13 +13,13 @@ if sys.version_info < min_version:
 {{ cookiecutter.package_dist_name }} does not support Python {0}.{1}.
 Python {2}.{3} and above is required. Check your Python version like so:
 
-python3 --version
+python --version
 
 This may be due to an out-of-date pip. Make sure you have pip >= 9.0.1.
 Upgrade pip like so:
 
 pip install --upgrade pip
-""".format(*sys.version_info[:2], *min_version)
+""".format(*(list(sys.version_info[:2]) + list(min_version)))
     sys.exit(error)
 
 here = path.abspath(path.dirname(__file__))
