@@ -186,15 +186,13 @@ documentation is built. This rst code:
 
    .. ipython:: python
 
-      import numpy as np
-      np.deg2rad(90)
+      1 + 1
 
 renders in HTML as:
 
 .. ipython:: python
 
-   import numpy as np
-   np.deg2rad(90)
+    1 + 1
 
 From here we refer you to the
 `IPython sphinx directive documentation <https://ipython.org/ipython-doc/rel-0.13.2/development/ipython_directive.html>`_.
