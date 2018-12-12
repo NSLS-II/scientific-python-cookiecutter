@@ -21,6 +21,6 @@ def test_perpendicular():
 
 def test_air_water():
     n_air, n_water = 1.00, 1.33
-    actual = snell(np.deg2rad(45), n_air, n_water)
+    actual = snell(np.pi/4, n_air, n_water)
     expected = 0.5605584137424605
     assert np.allclose(actual, expected)
