@@ -14,6 +14,11 @@ hunting for code snippets scattered across dozens of Jupyter notebooks? Has it
 become unwieldy to manage, update, and share with collaborators? This tutorial
 is for you.
 
+See this lightning talk from Scipy 2018 for a short overview of the motivation
+for and scope of this tutorial.
+
+.. youtube:: 1HDq7QoOlI4?start=1961
+
 Starting from a working, full-featured template, you will:
 
 * Move your code into a version-controlled, installable Python package.
