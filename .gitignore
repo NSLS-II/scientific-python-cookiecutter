@@ -2,3 +2,4 @@ docs/build/
 docs/source/generated/
 *.swp
 example/
+__pycache__/
