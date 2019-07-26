@@ -90,8 +90,14 @@ goes wrong, and debug if necessary. We recommend you do the same.
 
       python3 -m pip install --upgrade cookiecutter
 
-#. Generate a new Python project using our cookiecutter template. Just
-   following the prompts. The default suggestion is given in square brackets.
+#. Generate a new Python project using our cookiecutter template.
+
+   .. code-block:: bash
+   
+      cookiecutter https://github.com/NSLS-II/scientific-python-cookiecutter
+
+
+   You will see the following the prompts. The default suggestion is given in square brackets.
 
    For the last question, ``minimum_supported_python_version``, we recommend
    supporting only back to Python 3.6 so you can use features not available in
@@ -102,7 +108,6 @@ goes wrong, and debug if necessary. We recommend you do the same.
 
    .. code-block:: bash
 
-      cookiecutter https://github.com/NSLS-II/scientific-python-cookiecutter
       full_name [Name or Organization]: Brookhaven National Lab
       email []: dallan@bnl.gov
       github_username []: danielballan
