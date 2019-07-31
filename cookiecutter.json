@@ -5,7 +5,6 @@
     "project_name": "Your Project Name",
     "package_dist_name": "{{ cookiecutter.project_name|replace(' ', '-')|lower }}",
     "package_dir_name": "{{ cookiecutter.project_name|replace(' ', '_')|lower }}",
-    "package_dist_name": "{{ cookiecutter.project_name|replace(' ', '-')|lower }}",
     "repo_name": "{{ cookiecutter.project_name|replace(' ', '-')|lower }}",
     "project_short_description": "Python package for doing science.",
     "year": "2019",
