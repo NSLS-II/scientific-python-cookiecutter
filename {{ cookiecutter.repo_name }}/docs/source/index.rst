@@ -12,3 +12,4 @@
    installation
    usage
    release-history
+   min_versions
