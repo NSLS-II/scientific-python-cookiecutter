@@ -59,5 +59,5 @@ Activate Travis-CI for Your GitHub Repository
     above for the organization's profile at
     ``https://travis-ci.org/profile/YOUR_GITHUB_ORGANIZATION``. It does no
     harm to *also* activate Travis-CI for your personal fork at
-    ``https://travis.org/profile``, but it's more important to activate it for
+    ``https://travis-ci.org/profile``, but it's more important to activate it for
     the upstream fork associated with the organization.
