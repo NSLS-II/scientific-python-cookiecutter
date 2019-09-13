@@ -73,8 +73,10 @@ target/
 *.swo
 
 #pycharm
-.idea/*
+.idea/
 
+#VSCode
+.vscode/
 
 #Ipython Notebook
 .ipynb_checkpoints
