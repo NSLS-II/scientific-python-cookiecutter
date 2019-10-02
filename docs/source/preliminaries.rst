@@ -144,9 +144,9 @@ goes wrong, and debug if necessary. We recommend you do the same.
         insensitive.
       * ``package_dir_name`` --- The name to use when you ``import ___`` in Python.
         Underscores are the only punctuation allowed. Conventionally lowercase.
-      * ``repo_name`` --- The name of the GitHub repository.
+      * ``repo_name`` --- The name of the GitHub repository. (this will be the name of the new folder on your drive)
 
-#. Take a moment to see what we have.
+#. Take a moment to see what we have.(hidden files can be accessed via `ls -a` command in the terminal window)
 
    .. The following code-block output was generated using `tree -a example/`.
 
