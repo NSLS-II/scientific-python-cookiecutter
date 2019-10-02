@@ -121,6 +121,11 @@ wait to publish a release until your package is usable and tested.
    .. code-block:: bash
 
       python3 -m pip install --upgrade twine
+      
+#. Install wheel, a tool for producing `built distributions <https://packaging.python.org/glossary/#term-built-distribution>`_ for PyPI.
+   .. code-block:: bash
+   
+      python3 -m pip install --upgrade wheel
 
 #. Remove any extraneous files. If you happen to have any important files in
    your project directory that are not committed to git, move them first; this
@@ -134,8 +139,8 @@ wait to publish a release until your package is usable and tested.
 
    .. code-block:: bash
 
-       python setup.py sdist
-       python setup.py bdist_wheel
+       python3 setup.py sdist
+       python3 setup.py bdist_wheel
        twine upload dist/*
 
 The package is now installable with pip. It may take a couple minutes to become
