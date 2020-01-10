@@ -18,7 +18,8 @@ branch is updated.
 .. warning::
     The repo you want to build the docs for has to be a root repo.
     You cannot build docs for a forked repo by doctr.
-    doctr is working on enable forked repo build under `PR343 <https://github.com/drdoctr/doctr/pull/343>`_
+    The doctr team is working on enabling a forked repo build under
+    `PR #343 <https://github.com/drdoctr/doctr/pull/343>`_.
 
 Install doctr.
 
