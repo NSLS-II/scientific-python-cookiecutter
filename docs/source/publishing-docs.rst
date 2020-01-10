@@ -15,8 +15,10 @@ We recommend `doctr <https://drdoctr.github.io/doctr/>`_ a tool that configures
 Travis-CI to automatically publish your documentation every time the master
 branch is updated.
 
-**WARNING: The repo you want to build the docs for has to be a root repo. You
-cannot build docs for a forked repo by doctr.**
+.. warning::
+    The repo you want to build the docs for has to be a root repo.
+    You cannot build docs for a forked repo by doctr.
+    doctr is working on enable forked repo build under `PR343 <https://github.com/drdoctr/doctr/pull/343>`_
 
 Install doctr.
 
