@@ -11,7 +11,7 @@ previous section, :doc:`ci`.
 Configure Doctr
 ---------------
 
-We recommend `doctr <https://drdoctr.github.io/doctr/>`_ a tool that configures
+We recommend `doctr <https://drdoctr.github.io>`_ a tool that configures
 Travis-CI to automatically publish your documentation every time the master
 branch is updated.
 
