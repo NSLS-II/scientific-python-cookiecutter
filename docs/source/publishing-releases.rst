@@ -123,6 +123,7 @@ wait to publish a release until your package is usable and tested.
       python3 -m pip install --upgrade twine
       
 #. Install wheel, a tool for producing `built distributions <https://packaging.python.org/glossary/#term-built-distribution>`_ for PyPI.
+
    .. code-block:: bash
    
       python3 -m pip install --upgrade wheel
