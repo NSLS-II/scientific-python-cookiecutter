@@ -172,8 +172,29 @@ renders in HTML as:
 
 Try ``snell(0, 1, 1.33)``.
 
+Embedded Scripts
+^^^^^^^^^^^^^^^^
+
+For lengthy examples with tens of lines or more, it can be convenient to embed
+the content of a .py file rather than writing it directly into the
+documentation.
+
+This can be done using the directive
+
+.. code-block:: rest
+
+   .. literalinclude:: examples/some_example.py
+
+where the path is given relative to the current file's path. Thus, relative to
+the repository's root directory, the path to this example script would be
+``docs/source/examples/some_example.py``.
+
 From here we refer you to the
 `sphinx code example documentation <http://www.sphinx-doc.org/en/stable/markup/code.html>`_.
+
+To go beyond embedded scripts to a more richly-featured example gallery that
+shows scripts and their outputs, we encourage you to look at
+`sphinx-gallery <https://sphinx-gallery.github.io/>`_.
 
 IPython Examples
 ^^^^^^^^^^^^^^^^
