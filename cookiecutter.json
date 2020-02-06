@@ -4,11 +4,11 @@
     "github_username": "",
     "project_name": "Your Project Name",
     "package_dist_name": "{{ cookiecutter.project_name|replace(' ', '-')|lower }}",
-    "package_dir_name": "{{ cookiecutter.project_name|replace(' ', '_')|lower }}",
+    "package_dir_name": "{{ cookiecutter.project_name|replace(' ', '_')|replace('-', '_')|lower }}",
     "repo_name": "{{ cookiecutter.project_name|replace(' ', '-')|lower }}",
     "project_short_description": "Python package for doing science.",
     "year": "2020",
-    "minimum_supported_python_version": ["3.6", "3.7", "3.5", "3.4"],
+    "minimum_supported_python_version": ["3.6", "3.7", "3.8"],
     "_copy_without_render": [
         "*.html",
         "*.js"
