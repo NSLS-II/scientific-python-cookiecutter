@@ -165,7 +165,7 @@ function, shortening this:
 
 .. code-block:: python
 
-    get_image(filename, normalize=True, beginning=0, end=None):
+    def get_image(filename, normalize=True, beginning=0, end=None):
         ...
 
 into this:
