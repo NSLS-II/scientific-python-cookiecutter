@@ -62,7 +62,7 @@ goes wrong, and debug if necessary. We recommend you do the same.
 
       .. code-block:: bash
 
-         conda create -n my-env python=3.6
+         conda create -n my-env python=3.7
          conda activate my-env
 
 #. Verify that you have git installed.
@@ -100,11 +100,8 @@ goes wrong, and debug if necessary. We recommend you do the same.
    You will see the following the prompts. The default suggestion is given in square brackets.
 
    For the last question, ``minimum_supported_python_version``, we recommend
-   supporting only back to Python 3.6 so you can use features not available in
-   Python 3.4 or 3.5. But we allow for the possibility that you may need to
-   support older versions depending on your circumstances. Again, you can use
-   ``python3 --verison`` to check what version of Python is currently available
-   on your machine.
+   supporting back to Python 3.6 unless you have a need for newer Python
+   features.
 
    .. code-block:: bash
 
@@ -119,8 +116,8 @@ goes wrong, and debug if necessary. We recommend you do the same.
       year [2018]:
       Select minimum_supported_python_version:
       1 - Python 3.6
-      2 - Python 3.5
-      3 - Python 3.4
+      2 - Python 3.7
+      3 - Python 3.8
       Choose from 1, 2, 3 [1]:
 
    This generates a new directory, ``example`` in this case, with all the
