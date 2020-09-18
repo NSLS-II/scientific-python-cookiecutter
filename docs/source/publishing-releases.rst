@@ -136,7 +136,8 @@ wait to publish a release until your package is usable and tested.
 
       git clean -dfx
 
-#. Publish a release on PyPI.
+#. Publish a release on PyPI. Note that you might need to configure
+   your ``~/.pypirc`` with a login token.
 
    .. code-block:: bash
 
