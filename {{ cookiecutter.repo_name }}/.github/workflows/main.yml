@@ -25,7 +25,7 @@ jobs:
         run: python -m pip install . --no-deps
 
       - name: run the tests and check for test coverage
-        run: coverage run -m pytests
+        run: coverage run -m pytest
 
       - name: generate the test coverage report and upload it to codecov
         run: |
