@@ -116,12 +116,6 @@ wait to publish a release until your package is usable and tested.
 
 #. `Register for a PyPI account <https://pypi.org/account/register/>`_.
 
-#. Install twine, a tool for uploading packages to PyPI.
-
-   .. code-block:: bash
-
-      python3 -m pip install --upgrade twine
-      
 #. Install wheel, a tool for producing `built distributions <https://packaging.python.org/glossary/#term-built-distribution>`_ for PyPI.
 
    .. code-block:: bash
