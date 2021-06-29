@@ -3,3 +3,5 @@ docs/source/generated/
 *.swp
 example/
 __pycache__/
+venv/
+*.idea*
