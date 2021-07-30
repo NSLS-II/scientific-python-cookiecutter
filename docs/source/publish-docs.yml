@@ -3,11 +3,15 @@ name: Publish Documentation
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
-    if: github.repository_owner == 'bluesky'
+    # This conditional ensures that forks on GitHub do not attempt to publish
+    # documentation, only the "upstream" one. (If forks _did_ try to publish
+    # they would fail later below because they would not have access to the
+    # secret credentials. But it's better to opt out here.)
+    if: github.repository_owner == 'YOUR_GITHUB_USERNAME_OR_ORGANIZATION'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -33,7 +37,7 @@ jobs:
 
     - name: Install
       shell: bash -l {0}
-      run: source continuous_integration/scripts/install.sh pyqt5
+      run: source continuous_integration/scripts/install.sh
 
     - name: Install documentation-building requirements
       shell: bash -l {0}
@@ -52,9 +56,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501  # v3.7.3
       with:
         deploy_key: ${{ secrets.ACTIONS_DOCUMENTATION_DEPLOY_KEY }}
-        publish_branch: master
+        publish_branch: gh-pages
         publish_dir: ./docs/build/html
-        external_repository: bluesky/bluesky.github.io
-        destination_dir: ${{ env.REPOSITORY_NAME }}  # just the repo name, without the "bluesky/"
-        keep_files: true  # Keep old files.
-        force_orphan: false  # Keep git history.
