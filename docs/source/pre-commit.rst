@@ -67,7 +67,7 @@ committing. It looks like this::
     - files were modified by this hook
 
 
-When happened here? Your attempt to commit has been blocked. The files have
+What happened here? Your attempt to commit has been blocked. The files have
 been fixed for you---clearing the outputs from your notebooks, but
 git-hooks wont assume you want these fixes committed.
 Before trying again to commit, you must add those fixes to the "staged" changes::
