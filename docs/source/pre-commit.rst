@@ -69,7 +69,7 @@ committing. It looks like this::
 
 What happened here? Your attempt to commit has been blocked. The files have
 been fixed for you---clearing the outputs from your notebooks, but
-git-hooks wont assume you want these fixes committed.
+git-hooks won't assume you want these fixes committed.
 Before trying again to commit, you must add those fixes to the "staged" changes::
 
     # Stage again to include the fixes that we just applied (the cleared output areas).
