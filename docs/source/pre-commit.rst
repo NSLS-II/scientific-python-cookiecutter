@@ -38,7 +38,7 @@ which will construct your git hooks.
 You can customize this to your liking, or not use it entirely.
 For example, if you are migrating a large amount of existing code that is not compliant with
 PEP8, yet managing notebooks collaboratively,
-you may want to remove the sectopm that does ``flake8`` style-checking and  ``black``.
+you may want to remove the section that does ``flake8`` style-checking and  ``black``.
 
 Running ``pre-commit install`` inside the top-level directory of your repository
 will use this configuration file to set up git hooks to run prior to completing a commit.
