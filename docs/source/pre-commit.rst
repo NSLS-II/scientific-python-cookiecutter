@@ -83,5 +83,5 @@ Before trying again to commit, you must add those fixes to the "staged" changes:
 
 
 The same procedure holds for applying black to files.
-**However, Flake8 is checker and not a formatter.
+**However, Flake8 is a checker and not a formatter.
 It will only report issues, not change them.**
