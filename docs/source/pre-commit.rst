@@ -12,7 +12,7 @@ What are git hooks for?
 `Git hooks <https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks>`_ are way of running custom
 scripts on your repository either client-side or server-side. In fact, server-side hooks can
 be used to trigger things like continuous integration. Here we will focus on some client-side
-(i.e. on your local machine) hooks that will ensure code meets certain formatting standards
+(i.e. on your local machine) hooks that will ensure certain formatting standards
 are met prior to commits. This way, all of your commits are meaningful changes to code, and
 your git history doesn't get littered with "apply black" and "fix PEP-8" messages.
 Notably these kinds of tests can also be run during
