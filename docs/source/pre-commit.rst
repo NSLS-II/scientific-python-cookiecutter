@@ -51,7 +51,7 @@ time you commit changes to the repository files will be checked for these standa
 If your files don't fit the standard, the commit will fail.
 
 For example with notebooks and ``nbstripout``:
-**Before you commit changes to git** the *output* area of the notebooks must be
+**Before you commit changes to git** the *output* area of the notebooks must
 be cleared. This ensures that (1) the potentially-large output artifacts
 (such as figures) do not bloat the repository and (2) users visiting the
 tutorial will see a clean notebook, uncluttered by any previous code
