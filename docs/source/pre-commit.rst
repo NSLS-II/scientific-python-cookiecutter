@@ -59,6 +59,7 @@ execution. This can be accomplished by running ``nbstripout`` before the commit.
 
 If you forget to do this, an error message will protect you from accidentally
 committing. It looks like this::
+
     $ git add .
     $ git commit -m "oops"
     nbstripout...............................................................Failed
