@@ -6,6 +6,9 @@ flake8
 pytest
 sphinx
 twine
+pre-commit
+black
+nbstripout
 # These are dependencies of various sphinx extensions for documentation.
 ipython
 matplotlib

@@ -40,6 +40,7 @@ Starting from a working, full-featured template, you will:
    the-code-itself
    guiding-design-principles
    ci
+   pre-commit
    writing-docs
    including-data-files
    publishing-docs
