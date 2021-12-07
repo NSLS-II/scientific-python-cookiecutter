@@ -132,7 +132,7 @@ Try importing and using the function.
 
     >>> from example.refraction import snell
     >>> import numpy as np
-    >>> snell(np.pi/4, 1.00, 1.33))
+    >>> snell(np.pi/4, 1.00, 1.33)
     1.2239576240104186
 
 The docstring can be viewed with :func:`help`.
