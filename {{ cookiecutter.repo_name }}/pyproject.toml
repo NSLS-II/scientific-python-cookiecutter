@@ -1,4 +1,5 @@
 [tool.black]
+line-length = 115
 include = '\.pyi?$'
 exclude = '''
 /(
@@ -17,3 +18,4 @@ exclude = '''
   | tests/data
 )/
 '''
+
