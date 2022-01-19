@@ -4,7 +4,9 @@ on: [push, pull_request]
 
 
 jobs:
-  build:
+  publish-docs:
+    name: Build and publish documentation
+    if: github.repository_owner == 'NSLS-II'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -42,5 +44,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACTIONS_DOCUMENTATION_DEPLOY_KEY }}
+          publish_branch: master
           publish_dir: ./docs/build/html
-          force_orphan: true
+          external_repository: NSLS-II/NSLS-II.github.io
+          destination_dir: ${GITHUB_REPOSITORY#*/}  # just the repo name, without the "NSLS-II/"
+          keep_files: true  # Keep old files.
+          force_orphan: false  # Keep git history.
