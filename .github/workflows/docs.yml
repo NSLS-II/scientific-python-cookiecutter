@@ -1,0 +1,58 @@
+name: Docs
+
+on: [push, pull_request]
+
+
+jobs:
+  publish-docs:
+    name: Build and publish documentation
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9"]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set environment variable
+        run: |
+          export REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}  # just the repo, as opposed to org/repo
+          echo "REPOSITORY_NAME=${REPOSITORY_NAME}" >> $GITHUB_ENV
+
+      - name: Set up Python ${{ matrix.python-version }} with conda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: ${{ env.REPOSITORY_NAME }}-py${{ matrix.python-version }}
+          auto-update-conda: true
+          miniconda-version: "latest"
+          python-version: ${{ matrix.python-version }}
+          
+      - name: Build example code
+        shell: 'script --return --quiet --command "bash -l {0}"'
+        run: |
+            set -vxeo pipefail
+            conda env list
+            pip install -r requirements.txt
+            ./run_cookiecutter_example.py
+            pip install -e example/
+            ./copy_user_content.sh
+            pytest example/
+            
+      - name: Build docs
+        shell: bash -l {0}
+        run: make -C docs html
+        
+      - name: Publish docs
+        # We pin to the SHA, not the tag, for security reasons.
+        # https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/security-hardening-for-github-actions#using-third-party-actions
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && matrix.python-version == '3.9' }}
+        uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501  # v3.7.3
+        with:
+          github_token: ${{ secrets.ACTIONS_DOCUMENTATION_DEPLOY_KEY }}
+          publish_branch: master
+          publish_dir: ./docs/build/html
+          external_repository: NSLS-II/NSLS-II.github.io
+          destination_dir: ${{ env.REPOSITORY_NAME }}
+          keep_files: true  # Keep old files.
+          force_orphan: false  # Keep git history.
