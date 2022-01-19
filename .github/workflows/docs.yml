@@ -1,0 +1,46 @@
+name: Docs
+
+on: [push, pull_request]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9"]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up Python ${{ matrix.python-version }} with conda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: spcc-py${{ matrix.python-version }}
+          auto-update-conda: true
+          miniconda-version: "latest"
+          python-version: ${{ matrix.python-version }}
+          
+      - name: Build example code
+        shell: bash -l {0}
+        run: |
+            set -vxeo pipefail
+            conda env list
+            pip install -r requirements.txt
+            python run_cookiecutter_example.py
+            pip install -e example/
+            ./copy_user_content.sh
+            pytest example/
+            
+      - name: Build docs
+        shell: bash -l {0}
+        run: make -C docs html
+        
+      - name: Publish docs
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACTIONS_DOCUMENTATION_DEPLOY_KEY }}
+          publish_dir: ./docs/build/html
+          force_orphan: true
