@@ -23,7 +23,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           
       - name: Build example code
-        shell: bash -l {0}
+        shell: 'script --return --quiet --command "bash -l {0}"'
         run: |
             set -vxeo pipefail
             conda env list
