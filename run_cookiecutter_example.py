@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+import time as ttime
+
 import pexpect
 
 p = pexpect.spawn('cookiecutter .')
@@ -34,4 +35,6 @@ p.expect('Select minimum_supported_python_version.*')
 p.sendline('')
 
 # Runs until the cookiecutter is done; then exits.
-p.interact()
+#p.interact()  # this fails in the github docs workflow
+# replace elegant p.interact() with crude ttime.sleep()
+ttime.sleep(5)
