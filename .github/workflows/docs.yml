@@ -6,7 +6,7 @@ on: [push, pull_request]
 jobs:
   publish-docs:
     name: Build and publish documentation
-    if: github.repository_owner == 'NSLS-II'
+    #if: github.repository_owner == 'NSLS-II'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -15,11 +15,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
+      - name: Set environment variable
+        run: |
+          export REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}  # just the repo, as opposed to org/repo
+          echo "REPOSITORY_NAME=${REPOSITORY_NAME}" >> $GITHUB_ENV
+
       - name: Set up Python ${{ matrix.python-version }} with conda
         uses: conda-incubator/setup-miniconda@v2
         with:
-          activate-environment: spcc-py${{ matrix.python-version }}
+          activate-environment: ${{ env.REPOSITORY_NAME }}-py${{ matrix.python-version }}
           auto-update-conda: true
           miniconda-version: "latest"
           python-version: ${{ matrix.python-version }}
@@ -47,6 +52,6 @@ jobs:
           publish_branch: master
           publish_dir: ./docs/build/html
           external_repository: NSLS-II/NSLS-II.github.io
-          destination_dir: ${GITHUB_REPOSITORY#*/}  # just the repo name, without the "NSLS-II/"
+          destination_dir: ${{ env.REPOSITORY_NAME }}
           keep_files: true  # Keep old files.
           force_orphan: false  # Keep git history.
