@@ -6,8 +6,7 @@ on: [push, pull_request]
 jobs:
   publish-docs:
     name: Build and publish documentation
-    #if: github.repository_owner == 'NSLS-II'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         python-version: ["3.9"]
@@ -47,6 +46,7 @@ jobs:
       - name: Publish docs
         # We pin to the SHA, not the tag, for security reasons.
         # https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/security-hardening-for-github-actions#using-third-party-actions
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && matrix.python-version == '3.9' }}
         uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501  # v3.7.3
         with:
           github_token: ${{ secrets.ACTIONS_DOCUMENTATION_DEPLOY_KEY }}
