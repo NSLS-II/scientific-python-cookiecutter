@@ -28,7 +28,7 @@ jobs:
             set -vxeo pipefail
             conda env list
             pip install -r requirements.txt
-            python run_cookiecutter_example.py
+            ./run_cookiecutter_example.py
             pip install -e example/
             ./copy_user_content.sh
             pytest example/
@@ -38,7 +38,7 @@ jobs:
         run: make -C docs html
         
       - name: Publish docs
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && matrix.python-version == '3.9' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACTIONS_DOCUMENTATION_DEPLOY_KEY }}
