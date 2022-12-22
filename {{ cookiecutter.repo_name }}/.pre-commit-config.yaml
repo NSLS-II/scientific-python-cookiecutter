@@ -13,6 +13,12 @@ repos:
     rev: 5.11.2
     hooks:
       - id: isort
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    - id: check-yaml
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
   - repo: https://github.com/kynan/nbstripout
     rev: 0.3.9
     hooks:
