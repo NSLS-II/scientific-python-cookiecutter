@@ -43,6 +43,13 @@ you may want to remove the section that does ``flake8`` style-checking and  ``bl
 Running ``pre-commit install`` inside the top-level directory of your repository
 will use this configuration file to set up git hooks to run prior to completing a commit.
 
+Hooks included in this cookiecutter
+-----------------------------------
+- ``flake8``: Python style enforcement
+- ``black``: An uncompromising formatter complient with flake8
+- ``isort``: An import sorter for added consistency
+- Select hooks from ``pre-commit-hooks``: Whitespace enfrocement and yaml style-checking
+- ``nbstripout``: Jupyter notebook stripping of output
 
 Committing Changes
 ------------------
