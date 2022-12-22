@@ -8,6 +8,7 @@ sphinx
 twine
 pre-commit
 black
+isort
 nbstripout
 # These are dependencies of various sphinx extensions for documentation.
 ipython
