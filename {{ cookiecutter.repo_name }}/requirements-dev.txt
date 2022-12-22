@@ -8,7 +8,9 @@ sphinx
 twine
 pre-commit
 black
+isort
 nbstripout
+pre-commit-hooks
 # These are dependencies of various sphinx extensions for documentation.
 ipython
 matplotlib
