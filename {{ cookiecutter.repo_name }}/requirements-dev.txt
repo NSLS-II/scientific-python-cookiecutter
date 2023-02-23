@@ -1,16 +1,16 @@
 # These are required for developing the package (running the tests, building
 # the documentation) but not necessarily required for _using_ it.
+black
 codecov
 coverage
 flake8
+isort
+nbstripout
+pre-commit
+pre-commit-hooks
 pytest
 sphinx
 twine
-pre-commit
-black
-isort
-nbstripout
-pre-commit-hooks
 # These are dependencies of various sphinx extensions for documentation.
 ipython
 matplotlib

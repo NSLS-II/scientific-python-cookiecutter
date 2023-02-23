@@ -8,8 +8,8 @@ import versioneer
 # to ensure that we error out properly for people with outdated setuptools
 # and/or pip.
 min_version = (
-    {{cookiecutter.minimum_supported_python_version[0]}},
-    {{cookiecutter.minimum_supported_python_version[2]}},
+    {{ cookiecutter.minimum_supported_python_version[0] }},
+    {{ cookiecutter.minimum_supported_python_version[2] }},
 )
 if sys.version_info < min_version:
     error = """
@@ -34,11 +34,7 @@ with open(path.join(here, "README.rst"), encoding="utf-8") as readme_file:
 
 with open(path.join(here, "requirements.txt")) as requirements_file:
     # Parse requirements.txt, ignoring any commented-out lines.
-    requirements = [
-        line
-        for line in requirements_file.read().splitlines()
-        if not line.startswith("#")
-    ]
+    requirements = [line for line in requirements_file.read().splitlines() if not line.startswith("#")]
 
 
 setup(
