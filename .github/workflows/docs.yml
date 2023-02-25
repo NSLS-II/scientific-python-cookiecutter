@@ -34,11 +34,16 @@ jobs:
             set -vxeo pipefail
             pip install -r requirements.txt
             ./run_cookiecutter_example.py
+
+            # Test the style with pre-commit
             cd example/
+            git config --global user.name "CI Tester"
             git init
             git add .
-            git commit -m 'Initial commit' --author="Test User <testuser@example.com>"
+            git commit -m "Initial commit"
             pre-commit run --all-files
+            cd ..
+
             pip install -e example/
             ./copy_user_content.sh
             pytest example/
