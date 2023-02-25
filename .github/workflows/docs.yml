@@ -6,14 +6,14 @@ on: [push, pull_request]
 jobs:
   publish-docs:
     name: Build and publish documentation
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.7", "3.8", "3.9"]
+        python-version: ["3.8", "3.9", "3.10"]
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Set environment variable
         run: |
