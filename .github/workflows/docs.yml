@@ -54,6 +54,11 @@ jobs:
             
       - name: Build docs
         run: make -C docs html
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.REPOSITORY_NAME }}-docs
+          path: docs/build/html/
         
       - name: Publish docs
         # We pin to the SHA, not the tag, for security reasons.
