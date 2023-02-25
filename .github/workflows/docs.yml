@@ -57,7 +57,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: ${{ env.REPOSITORY_NAME }}-docs
+          name: ${{ env.REPOSITORY_NAME }}-py${{ matrix.python-version }}-docs
           path: docs/build/html/
         
       - name: Publish docs
