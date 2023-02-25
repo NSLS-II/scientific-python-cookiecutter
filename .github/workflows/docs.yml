@@ -1,6 +1,8 @@
 name: Docs
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
 
 
 jobs:
@@ -12,35 +14,36 @@ jobs:
         python-version: ["3.8", "3.9", "3.10"]
       fail-fast: false
 
-    steps:
-      - uses: actions/checkout@v3
+    defaults:
+      run:
+        shell: bash -l {0}
 
+    steps:
       - name: Set environment variable
         run: |
           export REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}  # just the repo, as opposed to org/repo
           echo "REPOSITORY_NAME=${REPOSITORY_NAME}" >> $GITHUB_ENV
 
-      - name: Set up Python ${{ matrix.python-version }} with conda
-        uses: conda-incubator/setup-miniconda@v2
-        with:
-          activate-environment: ${{ env.REPOSITORY_NAME }}-py${{ matrix.python-version }}
-          auto-update-conda: true
-          miniconda-version: "latest"
-          python-version: ${{ matrix.python-version }}
-          
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+
       - name: Build example code
         shell: 'script --return --quiet --command "bash -l {0}"'
         run: |
             set -vxeo pipefail
-            conda env list
             pip install -r requirements.txt
             ./run_cookiecutter_example.py
+            cd example/
+            git init
+            git add .
+            git commit -m 'Initial commit' --author="Test User <testuser@example.com>"
+            pre-commit run --all-files
             pip install -e example/
             ./copy_user_content.sh
             pytest example/
             
       - name: Build docs
-        shell: bash -l {0}
         run: make -C docs html
         
       - name: Publish docs
