@@ -64,19 +64,19 @@ docs/source/generated/
 target/
 
 # Editor files
-#mac
+# mac
 .DS_Store
 *~
 
-#vim
+# vim
 *.swp
 *.swo
 
-#pycharm
+# pycharm
 .idea/
 
-#VSCode
+# VSCode
 .vscode/
 
-#Ipython Notebook
+# Ipython Notebook
 .ipynb_checkpoints

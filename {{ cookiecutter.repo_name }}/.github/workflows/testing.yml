@@ -1,0 +1,55 @@
+name: Unit Tests
+
+on:
+  push:
+  pull_request:
+  # schedule:
+  #   - cron: '00 4 * * *'  # daily at 4AM
+
+jobs:
+  run_tests:
+    runs-on: ${{ matrix.host-os }}
+    strategy:
+      matrix:
+        host-os: ["ubuntu-latest"]
+        # host-os: ["ubuntu-latest", "macos-latest", "windows-latest"]
+        python-version: ["3.8", "3.9", "3.10"]
+      fail-fast: false
+
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - name: Set env vars
+        run: |
+          export REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}  # just the repo, as opposed to org/repo
+          echo "REPOSITORY_NAME=${REPOSITORY_NAME}" >> $GITHUB_ENV
+
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          # For reference: https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html.
+          set -vxeuo pipefail
+
+          # These packages are installed in the base environment but may be older
+          # versions. Explicitly upgrade them because they often create
+          # installation problems if out of date.
+          python -m pip install --upgrade pip setuptools numpy
+
+          pip install .
+          pip install -r requirements-dev.txt
+          pip list
+
+      - name: Test with pytest
+        run: |
+          set -vxeuo pipefail
+          coverage run -m pytest -vv -s
+          coverage report -m

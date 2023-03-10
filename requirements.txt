@@ -6,6 +6,7 @@ matplotlib
 numpy
 numpydoc
 pexpect
+pre-commit
 pytest
 sphinx
 sphinx-copybutton
