@@ -42,6 +42,7 @@ jobs:
             # Test the style with pre-commit
             cd example/
             git config --global user.name "CI Tester"
+            git config --global user.email "noreply@github.com"
             git init
             git add .
             git commit -m "Initial commit"
